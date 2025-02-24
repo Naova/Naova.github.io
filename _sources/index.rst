@@ -1,5 +1,5 @@
-Documentation des projets Naova
-===============================
+Documentation des projets de Naova
+==================================
 
 .. figure:: source/_static/nao.jpg
    :width: 100%
@@ -13,7 +13,7 @@ Si vous souhaitez ajouter votre propre projet à la documentation, consultez la 
 License
 ^^^^^^^
 
-La documentation des projets Naova est open-source et distribuée sous la licence BSD-3-Clause.
+La documentation des projets de Naova est open-source et distribuée sous la licence BSD-3-Clause.
 Pour plus de détails, consultez `BSD 3-Clause License
 <https://github.com/Naova/Naova.github.io/blob/main/LICENSE>`_.
 
