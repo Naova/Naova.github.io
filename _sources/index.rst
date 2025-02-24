@@ -20,7 +20,7 @@ Pour plus de détails, consultez `BSD 3-Clause License
 Remerciements
 ^^^^^^^^^^^^^
 
-Merci aux membres de Naova pour toutes leurs contributions. 
+Merci aux membres de Naova pour toutes leurs contributions. Pour voir la liste complète des développeurs des projets de Naova, consultez le fichier `CONTRIBUTORS.md <(https://github.com/Naova/Naova.github.io/blob/main/CONTRIBUTORS.md>`_.
 
 Table des matieres
 ^^^^^^^^^^^^^^^^^^
