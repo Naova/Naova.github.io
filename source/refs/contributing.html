@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Contributing &#8212; Naova Projects Documentation</title>
+    <title>Comment contribuer &#8212; Naova Projects Documentation</title>
   
   
   
@@ -61,7 +61,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Feb 22, 2025"/>
+    <meta name="docbuild:last-update" content="Feb 24, 2025"/>
   </head>
   
   
@@ -190,7 +190,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="additional_resources.html">Additional resources</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Contributing</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Comment contribuer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="issues.html">Issues</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
@@ -386,7 +386,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -397,11 +399,21 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Contributing</h1>
+    <h1>Comment contribuer</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etapes-a-suivre">Étapes à suivre</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nouvelles-modifications">Nouvelles modifications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bon-a-savoir-sur-l-ecriture-en-rst">Bon à savoir sur l’écriture en RST</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -411,8 +423,129 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="contributing">
-<span id="id1"></span><h1>Contributing<a class="headerlink" href="#contributing" title="Permalink to this heading">#</a></h1>
+  <section id="comment-contribuer">
+<span id="contributing"></span><h1>Comment contribuer<a class="headerlink" href="#comment-contribuer" title="Permalink to this heading">#</a></h1>
+<p>Une fois que vous avez terminé un projet chez Naova, il vous sera demandé de le documenter sur ce site. Cette page vous guidera dans le processus.</p>
+<section id="etapes-a-suivre">
+<h2>Étapes à suivre<a class="headerlink" href="#etapes-a-suivre" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Exécutez la commande suivante pour cloner le dépôt :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/Naova/Naova.github.io.git</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Ensuite, entrez dans le répertoire du projet :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd Naova.github.io</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Pour mettre votre dépôt local à jour avec le dernier état de la branche principale, exécutez :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git fetch origin</span>
+<span class="go">git checkout main</span>
+<span class="go">git reset --hard origin/main</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Créez une nouvelle branche avec la commande suivante :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git checkout -b nom_de_votre_projet</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Créez un fichier nommé <cite>nom_de_votre_projet.rst</cite> dans le dossier <cite>docs/source/projects/</cite>.</p></li>
+<li><p>Au début du fichier, ajoutez les lignes suivantes :</p></li>
+</ol>
+<div class="highlight-RST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_nom_de_votre_projet:</span>
+
+<span class="gh">Titre</span>
+<span class="gh">=====</span>
+</pre></div>
+</div>
+<p>Veillez à placer un underscore avant le nom de votre projet et à vous assurer que les signes égal sous le titre sont de la même longueur.</p>
+<ol class="arabic simple" start="7">
+<li><p>Ajoutez votre projet à <cite>index.rst</cite> dans la section “Projets”.</p></li>
+<li><p>Documentez votre projet dans le fichier <cite>.rst</cite>.</p></li>
+<li><p>Assurez-vous que votre utilisateur Git local est à jour, ou exécutez :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git config --global user.email &quot;email@example.com&quot;</span>
+<span class="go">git config --global user.name &quot;username&quot;</span>
+</pre></div>
+</div>
+<p>C’est l’utilisateur et l’email qui apparaîtront dans l’historique GitHub.</p>
+<ol class="arabic simple" start="10">
+<li><p>Exécutez la commande suivante pour sélectionner les modifications que vous souhaitez ajouter :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git add -p</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="11">
+<li><p>Validez vos modifications avec la commande suivante :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git commit -m &quot;Description du changement&quot;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="12">
+<li><p>Forkez <a class="reference external" href="https://github.com/Naova/Naova.github.io#fork-destination-box">Naova/Naova.github.io</a>.</p></li>
+<li><p>Ajoutez le dépôt forké avec la commande suivante :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git remote add fork https://github.com/username/Naova.github.io.git</span>
+</pre></div>
+</div>
+<p>Remplacez <cite>username</cite> par votre nom d’utilisateur GitHub.</p>
+<ol class="arabic simple" start="14">
+<li><p>Récupérez les mises à jour de votre fork avec la commande suivante :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git fetch fork</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="15">
+<li><p>Poussez votre branche vers votre fork avec la commande suivante :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git push fork</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="16">
+<li><p>Rendez-vous sur votre fork sur GitHub à l’adresse suivante : <cite>https://github.com/username/Naova.github.io</cite>.</p></li>
+<li><p>Cliquez sur le bouton <cite>New pull request</cite>.</p></li>
+<li><p>Dans la liste déroulante <cite>base</cite>, sélectionnez <cite>main</cite>, car vous souhaitez soumettre une PR vers cette branche.</p></li>
+<li><p>Dans la liste déroulante <cite>compare</cite>, sélectionnez votre branche (<cite>nom_de_votre_contribution</cite>).</p></li>
+<li><p>Passez en revue vos modifications et cliquez sur <cite>Create pull request</cite>.</p></li>
+<li><p>Attendez que tous les tests automatisés soient passés.</p></li>
+<li><p>La PR sera approuvée ou rejetée après examen par l’équipe.</p></li>
+</ol>
+</section>
+<section id="nouvelles-modifications">
+<h2>Nouvelles modifications<a class="headerlink" href="#nouvelles-modifications" title="Permalink to this heading">#</a></h2>
+<p>Pour continuer avec une nouvelle modification, revenez à l’étape 3.
+Pour revenir à votre PR et apporter de nouvelles modifications :</p>
+<ol class="arabic simple">
+<li><p>Exécutez la commande suivante pour mettre de côté les modifications en cours :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git stash</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Exécutez la commande suivante pour revenir à votre branche de contribution :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git checkout nom_de_votre_contribution</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Répétez les étapes 10 et 11.</p></li>
+<li><p>Poussez vos modifications à nouveau avec la commande suivante :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git push fork</span>
+</pre></div>
+</div>
+<p>La pull request sera automatiquement mise à jour.</p>
+</section>
+<section id="bon-a-savoir-sur-l-ecriture-en-rst">
+<h2>Bon à savoir sur l’écriture en RST<a class="headerlink" href="#bon-a-savoir-sur-l-ecriture-en-rst" title="Permalink to this heading">#</a></h2>
+<p>(à compléter)</p>
+</section>
 </section>
 
 
@@ -451,6 +584,24 @@
             
             
               
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etapes-a-suivre">Étapes à suivre</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nouvelles-modifications">Nouvelles modifications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bon-a-savoir-sur-l-ecriture-en-rst">Bon à savoir sur l’écriture en RST</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
             
           </div>
           <footer class="bd-footer-content">
@@ -479,7 +630,7 @@ By The Naova Projects Documentation Project Developers.
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Feb 22, 2025.
+  Last updated on Feb 24, 2025.
   <br/>
 </p>
   </div>
