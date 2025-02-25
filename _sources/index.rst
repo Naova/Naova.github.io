@@ -27,11 +27,12 @@ Table des matieres
 
 .. toctree::
    :maxdepth: 2
-   :caption: Prise en main
+   :caption: Configuration
 
-   source/setup/ecosystem
-   source/setup/installation
-   source/setup/faq
+   source/configuration/installation
+   source/configuration/simulation
+   source/configuration/irl
+   source/configuration/troubleshooting
 
 .. toctree::
    :maxdepth: 3
