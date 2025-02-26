@@ -57,8 +57,8 @@
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
-    <link rel="next" title="Troubleshooting" href="troubleshooting.html" />
-    <link rel="prev" title="Additional resources" href="additional_resources.html" />
+    <link rel="next" title="Bibliographie" href="bibliography.html" />
+    <link rel="prev" title="Ressources additionnelles" href="additional_resources.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   <meta name="docsearch:version" content="" />
@@ -206,11 +206,9 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Références</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="additional_resources.html">Additional resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional_resources.html">Ressources additionnelles</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Comment contribuer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="issues.html">Issues</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliographie</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Liens vers les projets</span></p>
 <ul class="nav bd-sidenav">
@@ -428,7 +426,15 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etapes-a-suivre">Étapes à suivre</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nouvelles-modifications">Nouvelles modifications</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bon-a-savoir-sur-l-ecriture-en-rst">Bon à savoir sur l’écriture en RST</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bon-a-savoir-sur-l-ecriture-en-rst">Bon à savoir sur l’écriture en RST</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insertion-de-liens">Insertion de liens</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mise-en-forme-du-texte">Mise en forme du texte</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creer-des-sous-sections">Créer des sous-sections</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insertion-d-images">Insertion d’images</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insertion-de-videos">Insertion de vidéos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references-a-d-autres-pages">Références à d’autres pages</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -588,7 +594,122 @@ Pour revenir à votre PR et apporter de nouvelles modifications :</p>
 </section>
 <section id="bon-a-savoir-sur-l-ecriture-en-rst">
 <h2>Bon à savoir sur l’écriture en RST<a class="headerlink" href="#bon-a-savoir-sur-l-ecriture-en-rst" title="Lien permanent vers cette rubrique">#</a></h2>
-<p>(à compléter)</p>
+<p>Le langage <strong>reStructuredText (RST)</strong> est utilisé pour la documentation technique et est largement adopté par <strong>Sphinx</strong>.
+Voici les principales fonctionnalités utiles pour rédiger efficacement vos documents.</p>
+<section id="insertion-de-liens">
+<h3>Insertion de liens<a class="headerlink" href="#insertion-de-liens" title="Lien permanent vers cette rubrique">#</a></h3>
+<p>Il existe plusieurs façons d’ajouter des liens en RST :</p>
+<ol class="arabic">
+<li><p><strong>Lien simple intégré dans le texte</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Voir la documentation officielle `Sphinx &lt;https://www.sphinx-doc.org/&gt;`_.
+</pre></div>
+</div>
+</li>
+<li><p><strong>Lien nommé (réutilisable dans plusieurs endroits du document)</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. _sphinx-docs: https://www.sphinx-doc.org/
+
+Consultez la `documentation Sphinx &lt;sphinx-docs_&gt;`_.
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="mise-en-forme-du-texte">
+<h3>Mise en forme du texte<a class="headerlink" href="#mise-en-forme-du-texte" title="Lien permanent vers cette rubrique">#</a></h3>
+<ul>
+<li><p><strong>Gras</strong> : <code class="docutils literal notranslate"><span class="pre">**Texte</span> <span class="pre">en</span> <span class="pre">gras**</span></code> → <strong>Texte en gras</strong></p></li>
+<li><p><em>Italique</em> : <code class="docutils literal notranslate"><span class="pre">*Texte</span> <span class="pre">en</span> <span class="pre">italique*</span></code> → <em>Texte en italique</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Texte</span> <span class="pre">en</span> <span class="pre">monospace</span></code> : <code class="docutils literal notranslate"><span class="pre">`code`</span></code> → <cite>code</cite></p></li>
+<li><p>Liste à puces</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Élément</span> <span class="mi">1</span>
+<span class="o">-</span> <span class="n">Élément</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</li>
+<li><p>Liste numérotée</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">Premier</span> <span class="n">élément</span>
+<span class="mf">2.</span> <span class="n">Deuxième</span> <span class="n">élément</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="creer-des-sous-sections">
+<h3>Créer des sous-sections<a class="headerlink" href="#creer-des-sous-sections" title="Lien permanent vers cette rubrique">#</a></h3>
+<p>RST permet d’organiser un document en sections et sous-sections en utilisant différentes ponctuations</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Titre</span> <span class="n">principal</span>
+<span class="o">===============</span>
+
+<span class="n">Section</span>
+<span class="o">-------</span>
+
+<span class="n">Sous</span><span class="o">-</span><span class="n">section</span>
+<span class="o">^^^^^^^^^^^^</span>
+
+<span class="n">Sous</span><span class="o">-</span><span class="n">sous</span><span class="o">-</span><span class="n">section</span>
+<span class="sd">&quot;&quot;&quot;&quot;&quot;&quot;</span><span class="s2">&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="insertion-d-images">
+<h3>Insertion d’images<a class="headerlink" href="#insertion-d-images" title="Lien permanent vers cette rubrique">#</a></h3>
+<p>Pour ajouter une image</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. image:: source/_static/project_name/nao_robot.png
+   :alt: Nao Robot
+   :width: 300px
+   :align: center
+
+ Cela affichera `source/_static/project_name/nao_robot.png` avec une largeur de **300px** et alignée au centre.
+</pre></div>
+</div>
+</section>
+<section id="insertion-de-videos">
+<h3>Insertion de vidéos<a class="headerlink" href="#insertion-de-videos" title="Lien permanent vers cette rubrique">#</a></h3>
+<p>Les vidéos peuvent être intégrées sous forme de liens ou via HTML brut si nécessaire :</p>
+<ol class="arabic">
+<li><p><strong>Lien vers une vidéo YouTube</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Voir la démonstration sur YouTube : `Vidéo RoboCup &lt;https://www.youtube.com/watch?v=xvFZjo5PgG0&gt;`_.
+</pre></div>
+</div>
+</li>
+<li><p><strong>HTML pour intégrer directement une vidéo</strong> (nécessite <cite>html</cite> dans Sphinx)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">raw</span><span class="p">::</span> <span class="n">html</span>
+    <span class="o">&lt;</span><span class="n">iframe</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;560&quot;</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;315&quot;</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://www.youtube.com/embed/xvFZjo5PgG0&quot;</span> <span class="n">frameborder</span><span class="o">=</span><span class="s2">&quot;0&quot;</span> <span class="n">allowfullscreen</span><span class="o">&gt;&lt;/</span><span class="n">iframe</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="references-a-d-autres-pages">
+<h3>Références à d’autres pages<a class="headerlink" href="#references-a-d-autres-pages" title="Lien permanent vers cette rubrique">#</a></h3>
+<p>Il est possible de créer des liens vers d’autres sections ou pages de la documentation.</p>
+<ol class="arabic">
+<li><p><strong>Lien vers une section de la même page</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Voir la section :ref:`Insertion d&#39;images &lt;insertion-images&gt;`.
+</pre></div>
+</div>
+<p>Pour que cela fonctionne, la section doit être marquée avec une <strong>étiquette</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">_insertion</span><span class="o">-</span><span class="n">images</span><span class="p">:</span>
+
+   <span class="n">Insertion</span> <span class="n">d</span><span class="s1">&#39;images</span>
+   <span class="o">------------------</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Lien vers une autre page de la documentation</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Voir aussi :doc:`autre_page`
+</pre></div>
+</div>
+<p>où <cite>autre_page.rst</cite> est un fichier dans le même projet.</p>
+</li>
+<li><p><strong>Lien vers une référence bibliographique</strong> (avec <cite>sphinxcontrib-bibtex</cite>)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Voir</span> <span class="n">l</span><span class="s1">&#39;article :cite:`kali2021walking`</span>
+</pre></div>
+</div>
+<p>La citation doit être définie dans un fichier <cite>.bib</cite> inclus dans la documentation.</p>
+</li>
+</ol>
+</section>
 </section>
 </section>
 
@@ -609,15 +730,15 @@ Pour revenir à votre PR et apporter de nouvelles modifications :</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">précédent</p>
-        <p class="prev-next-title">Additional resources</p>
+        <p class="prev-next-title">Ressources additionnelles</p>
       </div>
     </a>
     <a class="right-next"
-       href="troubleshooting.html"
+       href="bibliography.html"
        title="page suivante">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">Troubleshooting</p>
+        <p class="prev-next-title">Bibliographie</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -640,7 +761,15 @@ Pour revenir à votre PR et apporter de nouvelles modifications :</p>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etapes-a-suivre">Étapes à suivre</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nouvelles-modifications">Nouvelles modifications</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bon-a-savoir-sur-l-ecriture-en-rst">Bon à savoir sur l’écriture en RST</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bon-a-savoir-sur-l-ecriture-en-rst">Bon à savoir sur l’écriture en RST</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insertion-de-liens">Insertion de liens</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mise-en-forme-du-texte">Mise en forme du texte</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creer-des-sous-sections">Créer des sous-sections</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insertion-d-images">Insertion d’images</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insertion-de-videos">Insertion de vidéos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references-a-d-autres-pages">Références à d’autres pages</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

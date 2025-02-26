@@ -69,8 +69,6 @@ Table des matieres
 
    source/refs/additional_resources
    source/refs/contributing
-   source/refs/troubleshooting
-   source/refs/issues
    source/refs/bibliography
 
 .. toctree::

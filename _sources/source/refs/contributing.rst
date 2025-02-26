@@ -162,7 +162,118 @@ Pour revenir à votre PR et apporter de nouvelles modifications :
 
 La pull request sera automatiquement mise à jour.
 
+
 Bon à savoir sur l'écriture en RST
 ----------------------------------
 
-(à compléter)
+Le langage **reStructuredText (RST)** est utilisé pour la documentation technique et est largement adopté par **Sphinx**.  
+Voici les principales fonctionnalités utiles pour rédiger efficacement vos documents.
+
+
+Insertion de liens
+^^^^^^^^^^^^^^^^^^
+
+Il existe plusieurs façons d'ajouter des liens en RST :
+
+1. **Lien simple intégré dans le texte** ::
+
+    Voir la documentation officielle `Sphinx <https://www.sphinx-doc.org/>`_.
+
+2. **Lien nommé (réutilisable dans plusieurs endroits du document)** ::
+
+    .. _sphinx-docs: https://www.sphinx-doc.org/
+
+    Consultez la `documentation Sphinx <sphinx-docs_>`_.
+
+
+Mise en forme du texte
+^^^^^^^^^^^^^^^^^^^^^^
+
+- **Gras** : ``**Texte en gras**`` → **Texte en gras**  
+- *Italique* : ``*Texte en italique*`` → *Texte en italique*  
+- ``Texte en monospace`` : ```code``` → `code`
+- Liste à puces ::
+
+   - Élément 1
+   - Élément 2
+
+- Liste numérotée ::
+
+   1. Premier élément
+   2. Deuxième élément
+
+
+Créer des sous-sections
+^^^^^^^^^^^^^^^^^^^^^^^
+
+RST permet d'organiser un document en sections et sous-sections en utilisant différentes ponctuations ::
+
+   Titre principal
+   ===============
+
+   Section
+   -------
+
+   Sous-section
+   ^^^^^^^^^^^^
+
+   Sous-sous-section
+   """""""""""""""""
+
+
+Insertion d'images
+^^^^^^^^^^^^^^^^^^
+
+Pour ajouter une image ::
+
+   .. image:: source/_static/project_name/nao_robot.png
+      :alt: Nao Robot
+      :width: 300px
+      :align: center
+
+    Cela affichera `source/_static/project_name/nao_robot.png` avec une largeur de **300px** et alignée au centre.
+
+
+Insertion de vidéos
+^^^^^^^^^^^^^^^^^^^
+
+Les vidéos peuvent être intégrées sous forme de liens ou via HTML brut si nécessaire :
+
+1. **Lien vers une vidéo YouTube** ::
+    
+    Voir la démonstration sur YouTube : `Vidéo RoboCup <https://www.youtube.com/watch?v=xvFZjo5PgG0>`_.
+
+
+2. **HTML pour intégrer directement une vidéo** (nécessite `html` dans Sphinx) ::
+
+    .. raw:: html
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/xvFZjo5PgG0" frameborder="0" allowfullscreen></iframe>
+
+
+Références à d'autres pages
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Il est possible de créer des liens vers d'autres sections ou pages de la documentation.
+
+1. **Lien vers une section de la même page** ::
+
+    Voir la section :ref:`Insertion d'images <insertion-images>`.
+
+   Pour que cela fonctionne, la section doit être marquée avec une **étiquette** ::
+    
+    .. _insertion-images:
+
+       Insertion d'images
+       ------------------
+
+2. **Lien vers une autre page de la documentation** ::
+
+    Voir aussi :doc:`autre_page`
+
+   où `autre_page.rst` est un fichier dans le même projet.
+
+3. **Lien vers une référence bibliographique** (avec `sphinxcontrib-bibtex`) ::
+
+    Voir l'article :cite:`kali2021walking`
+
+   La citation doit être définie dans un fichier `.bib` inclus dans la documentation.
