@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Additional resources &#8212; Documentation des projets de Naova</title>
+    <title>Guide Développeur &#8212; Documentation des projets de Naova</title>
   
   
   
@@ -53,12 +53,12 @@
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script src="../../_static/translations.js"></script>
     <script src="../../_static/design-tabs.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'source/refs/additional_resources';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'source/overview/developer_guide';</script>
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
-    <link rel="next" title="Comment contribuer" href="contributing.html" />
-    <link rel="prev" title="Detection-de-ligne" href="../projects/detection_de_ligne.html" />
+    <link rel="next" title="Concepts de base" href="core_concepts.html" />
+    <link rel="prev" title="Résolution de Problèmes" href="../configuration/troubleshooting_installation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   <meta name="docsearch:version" content="" />
@@ -189,9 +189,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../configuration/troubleshooting_installation.html">Résolution de Problèmes</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Vue d'ensemble</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../overview/developer_guide.html">Guide Développeur</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../overview/core_concepts.html">Concepts de base</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Guide Développeur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="core_concepts.html">Concepts de base</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ressources</span></p>
 <ul class="nav bd-sidenav">
@@ -206,12 +206,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../projects/detection_de_ligne.html">Detection-de-ligne</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Références</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Additional resources</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">Comment contribuer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="issues.html">Issues</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../refs/additional_resources.html">Additional resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../refs/contributing.html">Comment contribuer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../refs/troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../refs/issues.html">Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../refs/bibliography.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Liens vers les projets</span></p>
 <ul class="nav bd-sidenav">
@@ -294,7 +294,7 @@
       
       
       
-      <li><a href="https://github.com/Naova/NaovaRelease/edit/main/source/refs/additional_resources.rst" target="_blank"
+      <li><a href="https://github.com/Naova/NaovaRelease/edit/main/source/overview/developer_guide.rst" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -311,7 +311,7 @@
       
       
       
-      <li><a href="https://github.com/Naova/NaovaRelease/issues/new?title=Issue%20on%20page%20%2Fsource/refs/additional_resources.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Naova/NaovaRelease/issues/new?title=Issue%20on%20page%20%2Fsource/overview/developer_guide.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Ouvrez un problème"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -341,7 +341,7 @@
       
       
       
-      <li><a href="../../_sources/source/refs/additional_resources.rst" target="_blank"
+      <li><a href="../../_sources/source/overview/developer_guide.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Télécharger le fichier source"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -404,7 +404,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -415,11 +417,22 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Additional resources</h1>
+    <h1>Guide Développeur</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contenu </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-de-l-environnement-de-developpement">Configuration de l’environnement de développement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-du-code">Structure du code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonnes-pratiques-de-developpement">Bonnes pratiques de développement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gestion-des-dependances">Gestion des dépendances</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -429,8 +442,25 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="additional-resources">
-<span id="id1"></span><h1>Additional resources<a class="headerlink" href="#additional-resources" title="Lien permanent vers cette rubrique">#</a></h1>
+  <section id="guide-developpeur">
+<span id="developer-guide"></span><h1>Guide Développeur<a class="headerlink" href="#guide-developpeur" title="Lien permanent vers cette rubrique">#</a></h1>
+<p>Fournir un guide complet pour les développeurs qui souhaitent contribuer aux projets de Naova.</p>
+<section id="configuration-de-l-environnement-de-developpement">
+<h2>Configuration de l’environnement de développement<a class="headerlink" href="#configuration-de-l-environnement-de-developpement" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>blank</p>
+</section>
+<section id="structure-du-code">
+<h2>Structure du code<a class="headerlink" href="#structure-du-code" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>blank</p>
+</section>
+<section id="bonnes-pratiques-de-developpement">
+<h2>Bonnes pratiques de développement<a class="headerlink" href="#bonnes-pratiques-de-developpement" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>blank</p>
+</section>
+<section id="gestion-des-dependances">
+<h2>Gestion des dépendances<a class="headerlink" href="#gestion-des-dependances" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>blank</p>
+</section>
 </section>
 
 
@@ -445,20 +475,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../projects/detection_de_ligne.html"
+       href="../configuration/troubleshooting_installation.html"
        title="page précédente">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">précédent</p>
-        <p class="prev-next-title">Detection-de-ligne</p>
+        <p class="prev-next-title">Résolution de Problèmes</p>
       </div>
     </a>
     <a class="right-next"
-       href="contributing.html"
+       href="core_concepts.html"
        title="page suivante">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">Comment contribuer</p>
+        <p class="prev-next-title">Concepts de base</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -468,6 +498,25 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenu
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-de-l-environnement-de-developpement">Configuration de l’environnement de développement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-du-code">Structure du code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonnes-pratiques-de-developpement">Bonnes pratiques de développement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gestion-des-dependances">Gestion des dépendances</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

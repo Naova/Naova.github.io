@@ -49,7 +49,32 @@ Veillez à placer un underscore avant le nom de votre projet et à vous assurer 
 
 7.  Ajoutez votre projet à `index.rst` dans la section "Projets".
 
-8.  Documentez votre projet dans le fichier `.rst`.
+8.  Documentez votre projet dans le fichier `.rst`. Une fois que c'est fait pour construire et ouvrir la documentation localement entrez : 
+
+.. tab-set::
+   :sync-group: os
+
+   .. tab-item:: :icon:`fa-brands fa-linux` Linux
+      :sync: linux
+
+      .. note::
+
+         Nous l'avons testé seulement sur Ubuntu 22.04LTS.
+
+      .. code:: console
+
+         rm -rf docs/_build && ./naova.sh
+
+   .. tab-item:: :icon:`fa-brands fa-windows` Windows
+      :sync: windows
+
+      .. note::
+
+         WIP
+
+      .. code:: console
+
+         naova.bat
 
 9.   Assurez-vous que votre utilisateur Git local est à jour, ou exécutez :
 
@@ -80,7 +105,7 @@ C'est l'utilisateur et l'email qui apparaîtront dans l'historique GitHub.
     
     git remote add fork https://github.com/username/Naova.github.io.git
 
-Remplacez `username` par votre nom d'utilisateur GitHub.
+**Remplacez** `username` par votre nom d'utilisateur GitHub.
 
 14.  Récupérez les mises à jour de votre fork avec la commande suivante :
 
