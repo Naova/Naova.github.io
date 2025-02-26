@@ -12,6 +12,9 @@ Installation
 - Installer les dépendances
     Détaille les étapes pour installer les dépendances
 
+    blank
+    
+
 .. code-block:: console
 
     blank

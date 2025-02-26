@@ -6,9 +6,11 @@ Documentation des projets de Naova
    :alt: Robot Nao debout
 
 
-Cette documentation regroupe les différents projets réalisés au sein de Naova, dans le but de faciliter la navigation et d'assurer une meilleure transmission d'informations pour les nouveaux membres du club.
+Cette documentation regroupe les différents projets réalisés au sein de Naova, 
+dans le but de faciliter la navigation et d'assurer une meilleure transmission d'informations pour les nouveaux membres du club.
 
-Si vous souhaitez ajouter votre propre projet à la documentation, consultez la section `Comment contribuer <https://naova.github.io/source/refs/contributing.html>`_.
+Si vous souhaitez ajouter votre propre projet à la documentation, 
+consultez la section `Comment contribuer <https://naova.github.io/source/refs/contributing.html>`_.
 
 License
 ^^^^^^^
@@ -20,7 +22,9 @@ Pour plus de détails, consultez `BSD 3-Clause License
 Remerciements
 ^^^^^^^^^^^^^
 
-Merci aux membres de Naova pour toutes leurs contributions. Pour voir la liste complète des développeurs des projets de Naova, consultez le fichier `CONTRIBUTORS.md <https://github.com/Naova/Naova.github.io/blob/main/CONTRIBUTORS.md>`_.
+Merci aux membres de Naova pour toutes leurs contributions. 
+Pour voir la liste complète des développeurs des projets de Naova, 
+consultez le fichier `CONTRIBUTORS.md <https://github.com/Naova/Naova.github.io/blob/main/CONTRIBUTORS.md>`_.
 
 Table des matieres
 ^^^^^^^^^^^^^^^^^^
@@ -47,9 +51,8 @@ Table des matieres
    :caption: Ressources
    :titlesonly:
 
-   source/resources/tutorials/index
-   source/resources/how-to/index
-   source/resources/deployment/index
+   source/resources/tutorial
+   source/resources/how_to
 
 .. toctree::
    :maxdepth: 1

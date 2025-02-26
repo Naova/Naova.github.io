@@ -10,17 +10,21 @@ Configuration de l'environnement de développement
 
 blank
 
+
 Structure du code
 -----------------
 
 blank
+
 
 Bonnes pratiques de développement
 ---------------------------------
 
 blank
 
+
 Gestion des dépendances
 -----------------------
 
 blank 
+

@@ -3,7 +3,8 @@
 Comment contribuer
 ==================
 
-Une fois que vous avez terminé un projet chez Naova, il vous sera demandé de le documenter sur ce site. Cette page vous guidera dans le processus.
+Une fois que vous avez terminé un projet chez Naova, il vous sera demandé de le documenter sur ce site. 
+Cette page vous guidera dans le processus.
 
 Étapes à suivre
 ---------------

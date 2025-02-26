@@ -57,7 +57,7 @@
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
-    <link rel="next" title="Tutorials" href="../resources/tutorials/index.html" />
+    <link rel="next" title="Tutoriels" href="../resources/tutorial.html" />
     <link rel="prev" title="Guide Développeur" href="developer_guide.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
@@ -195,9 +195,8 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ressources</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../resources/tutorials/index.html">Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../resources/how-to/index.html">How-to guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../resources/deployment/index.html">Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/tutorial.html">Tutoriels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/how_to.html">Comment faire</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Projets</span></p>
 <ul class="nav bd-sidenav">
@@ -448,29 +447,53 @@
 <span id="core-concepts"></span><h1>Concepts de base<a class="headerlink" href="#concepts-de-base" title="Lien permanent vers cette rubrique">#</a></h1>
 <section id="bindings-et-threads">
 <h2>Bindings et Threads<a class="headerlink" href="#bindings-et-threads" title="Lien permanent vers cette rubrique">#</a></h2>
-<p>Le logiciel de Naova (dérivé de celui de B-Human) fonctionne sous forme d’un exécutable unique avec plusieurs fichiers de configuration. Lors du démarrage, il vérifie l’identité du robot avant de lancer le programme principal. Ce dernier communique avec LoLA, l’interface du NAO, en utilisant une communication bloquante pour assurer une synchronisation efficace.</p>
-<p>Le système repose sur plusieurs threads parallèles, chacun ayant une fonction spécifique. Parmi eux, les threads de perception traitent les images des caméras en parallèle, tandis que d’autres gèrent la cognition et le mouvement. Un dernier thread s’occupe de la communication avec un PC distant pour le débogage.</p>
+<p>Le logiciel de Naova (dérivé de celui de B-Human) fonctionne sous forme d’un exécutable unique avec plusieurs fichiers de configuration.
+Lors du démarrage, il vérifie l’identité du robot avant de lancer le programme principal.
+Ce dernier communique avec LoLA, l’interface du NAO, en utilisant une communication bloquante pour assurer une synchronisation efficace.</p>
+<p>Le système repose sur plusieurs threads parallèles, chacun ayant une fonction spécifique.
+Parmi eux, les threads de perception traitent les images des caméras en parallèle,
+tandis que d’autres gèrent la cognition et le mouvement.
+Un dernier thread s’occupe de la communication avec un PC distant pour le débogage.</p>
 </section>
 <section id="modules-et-representations">
 <h2>Modules et Représentations<a class="headerlink" href="#modules-et-representations" title="Lien permanent vers cette rubrique">#</a></h2>
-<p>Le logiciel est conçu sous forme de modules interconnectés, chacun ayant des entrées et sorties appelées « représentations ». Une structure de « blackboard » est utilisée pour stocker ces représentations, et les modules sont automatiquement ordonnés en fonction de leurs dépendances.</p>
-<p>Chaque module est défini par son interface, son implémentation et une déclaration permettant son instanciation. Les modules peuvent être paramétrés dynamiquement via des fichiers de configuration ou des commandes interactives.</p>
+<p>Le logiciel est conçu sous forme de modules interconnectés,
+chacun ayant des entrées et sorties appelées « représentations ».
+Une structure de « blackboard » est utilisée pour stocker ces représentations,
+et les modules sont automatiquement ordonnés en fonction de leurs dépendances.</p>
+<p>Chaque module est défini par son interface,
+son implémentation et une déclaration permettant son instanciation.
+Les modules peuvent être paramétrés dynamiquement via des fichiers de configuration ou des commandes interactives.</p>
 </section>
 <section id="serialization">
 <h2>Serialization<a class="headerlink" href="#serialization" title="Lien permanent vers cette rubrique">#</a></h2>
-<p>La sérialisation permet de convertir les données en une suite d’octets pour le stockage ou la transmission. Le système utilise une approche similaire à la bibliothèque iostreams de C++, avec des opérateurs &lt;&lt; et &gt;&gt; pour la lecture et l’écriture. Une hiérarchie de flux est utilisée pour gérer différents formats, notamment binaire et texte. Des classes dérivées permettent d’automatiser la sérialisation de structures complexes.</p>
+<p>La sérialisation permet de convertir les données en une suite d’octets pour le stockage ou la transmission.
+Le système utilise une approche similaire à la bibliothèque iostreams de C++,
+avec des opérateurs &lt;&lt; et &gt;&gt; pour la lecture et l’écriture.
+Une hiérarchie de flux est utilisée pour gérer différents formats,
+notamment binaire et texte. Des classes dérivées permettent d’automatiser la sérialisation de structures complexes.</p>
 </section>
 <section id="communication">
 <h2>Communication<a class="headerlink" href="#communication" title="Lien permanent vers cette rubrique">#</a></h2>
-<p>La communication au sein du système se fait à trois niveaux : entre threads, avec un PC pour le débogage, et entre robots d’une équipe. La communication inter-thread est triple-bufferisée pour éviter les blocages. Le débogage repose sur des messages échangés via une file d’attente. Enfin, la communication en équipe se fait par UDP, permettant à chaque robot d’envoyer et recevoir des informations essentielles au jeu en temps réel.</p>
+<p>La communication au sein du système se fait à trois niveaux :
+entre threads, avec un PC pour le débogage, et entre robots d’une équipe.
+La communication inter-thread est triple-bufferisée pour éviter les blocages.
+Le débogage repose sur des messages échangés via une file d’attente.
+Enfin, la communication en équipe se fait par UDP,
+permettant à chaque robot d’envoyer et recevoir des informations essentielles au jeu en temps réel.</p>
 </section>
 <section id="debugging">
 <h2>Debugging<a class="headerlink" href="#debugging" title="Lien permanent vers cette rubrique">#</a></h2>
-<p>Le système propose plusieurs outils de débogage, notamment des requêtes de débogage activables dynamiquement, des images de débogage permettant d’afficher des données de traitement visuel, et des dessins vectoriels superposés à l’affichage. Des chronomètres intégrés permettent de mesurer les temps d’exécution des différentes parties du code.</p>
+<p>Le système propose plusieurs outils de débogage, notamment des requêtes de débogage activables dynamiquement,
+des images de débogage permettant d’afficher des données de traitement visuel, et des dessins vectoriels superposés à l’affichage.
+Des chronomètres intégrés permettent de mesurer les temps d’exécution des différentes parties du code.</p>
 </section>
 <section id="logging">
 <h2>Logging<a class="headerlink" href="#logging" title="Lien permanent vers cette rubrique">#</a></h2>
-<p>Les journaux d’exécution permettent d’enregistrer les données collectées et traitées par le robot pour une analyse ultérieure. Deux modes sont disponibles : l’enregistrement en ligne directement sur le robot et l’enregistrement à distance sur un PC via une connexion de débogage. Les fichiers de logs peuvent être rejoués dans le simulateur pour tester et améliorer les modules sans avoir besoin d’un robot physique.</p>
+<p>Les journaux d’exécution permettent d’enregistrer les données collectées et traitées par le robot pour une analyse ultérieure.
+Deux modes sont disponibles :
+l’enregistrement en ligne directement sur le robot et l’enregistrement à distance sur un PC via une connexion de débogage.
+Les fichiers de logs peuvent être rejoués dans le simulateur pour tester et améliorer les modules sans avoir besoin d’un robot physique.</p>
 </section>
 </section>
 
@@ -495,11 +518,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="../resources/tutorials/index.html"
+       href="../resources/tutorial.html"
        title="page suivante">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">Tutorials</p>
+        <p class="prev-next-title">Tutoriels</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
