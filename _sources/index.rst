@@ -30,7 +30,7 @@ Table des matieres
 ^^^^^^^^^^^^^^^^^^
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Configuration
 
    source/configuration/installation
@@ -45,21 +45,23 @@ Table des matieres
    source/overview/core_concepts
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Ressources
    :titlesonly:
 
-   source/resources/tutorial
-   source/resources/how_to
+   source/resources/tutorials/index
+   source/resources/how-to/index
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Projets
    :titlesonly:
 
-   source/projects/controlleur_de_marche
-   source/projects/detection_de_balle
-   source/projects/detection_de_ligne
+   source/projects/behavior/index
+   source/projects/communication/index
+   source/projects/motors/index
+   source/projects/vision/index
+   source/projects/challenges/index
 
 .. toctree::
    :maxdepth: 1
