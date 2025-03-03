@@ -215,13 +215,13 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../projects/communication/index.html">Communication</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../projects/motors/index.html">Moteurs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../projects/motors/walk_controller.html">Controlleur de marche</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../projects/motion-control/index.html">Contrôle de mouvement</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/motion-control/walk_controller.html">Contrôleur de marche</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../projects/vision/index.html">Vision</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../projects/vision/ball_detector.html">Detecteur de balle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../projects/vision/line_detector.html">Detecteur de ligne</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../projects/perception/index.html">Perception</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/perception/ball_detector.html">Détecteur de balle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/perception/line_detector.html">Détecteur de ligne</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../projects/challenges/index.html">Challenges</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
@@ -425,7 +425,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -441,6 +443,15 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contenu </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-code">Le code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explications">Explications</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -452,6 +463,70 @@
                   
   <section id="creer-une-nouvelle-representation">
 <span id="representation"></span><h1>Créer une nouvelle représentation<a class="headerlink" href="#creer-une-nouvelle-representation" title="Lien permanent vers cette rubrique">#</a></h1>
+<p>Dans ce tutoriel, nous allons voir comment créer une représentation en utilisant le cas précis de la détection d’un objet rouge via la caméra.</p>
+<section id="le-code">
+<h2>Le code<a class="headerlink" href="#le-code" title="Lien permanent vers cette rubrique">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-code" viewBox="0 0 16 16" aria-hidden="true"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"></path></svg></span><span class="sd-summary-text">Code pour <em>ColorDetect.h</em></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos"> 1</span><span class="cm">/**</span>
+</span><span class="hll"><span class="linenos"> 2</span><span class="cm">* @file ColorDetect.h</span>
+</span><span class="hll"><span class="linenos"> 3</span><span class="cm">*</span>
+</span><span class="hll"><span class="linenos"> 4</span><span class="cm">* This file declares a struct represents the requested information from the red color detection.</span>
+</span><span class="hll"><span class="linenos"> 5</span><span class="cm">*</span>
+</span><span class="hll"><span class="linenos"> 6</span><span class="cm">* @author Louis Le Lay</span>
+</span><span class="hll"><span class="linenos"> 7</span><span class="cm">*/</span>
+</span><span class="linenos"> 8</span>
+<span class="hll"><span class="linenos"> 9</span><span class="cp">#pragma once</span>
+</span><span class="linenos">10</span>
+<span class="hll"><span class="linenos">11</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Tools/Math/Angle.h&quot;</span>
+</span><span class="hll"><span class="linenos">12</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Tools/Streams/AutoStreamable.h&quot;</span>
+</span><span class="hll"><span class="linenos">13</span>
+</span><span class="hll"><span class="linenos">14</span><span class="cm">/**</span>
+</span><span class="hll"><span class="linenos">15</span><span class="cm">* @struct ColorDetect</span>
+</span><span class="hll"><span class="linenos">16</span><span class="cm">* A struct that represents the requested information from the color detection.</span>
+</span><span class="hll"><span class="linenos">17</span><span class="cm">*/</span>
+</span><span class="hll"><span class="linenos">18</span><span class="n">STREAMABLE</span><span class="p">(</span><span class="n">ColorDetect</span><span class="p">,</span>
+</span><span class="hll"><span class="linenos">19</span><span class="p">{,</span>
+</span><span class="hll"><span class="linenos">20</span><span class="p">(</span><span class="kt">bool</span><span class="p">)(</span><span class="nb">true</span><span class="p">)</span><span class="w"> </span><span class="n">isThereRedColor</span><span class="p">,</span><span class="w"> </span><span class="cm">/**&lt; Give the information if there is a red color or not */</span>
+</span><span class="hll"><span class="linenos">21</span><span class="p">});</span>
+</span></pre></div>
+</div>
+</div>
+</details></section>
+<section id="explications">
+<h2>Explications<a class="headerlink" href="#explications" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>Cette fois, nous allons créer le fichier <em>ColorDetect.h</em> dans le répertoire <code class="docutils literal notranslate"><span class="pre">Src/Representations/Perception/ColorDetects/</span></code>.</p>
+<p>Tout d’abord, nous commençons par ajouter un commentaire en tête du fichier, comme d’habitude :</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm">* @file ColorDetect.h</span>
+<span class="cm">*</span>
+<span class="cm">* This file declares a struct represents the requested information from the red color detection.</span>
+<span class="cm">*</span>
+<span class="cm">* @author Louis Le Lay</span>
+<span class="cm">*/</span>
+</pre></div>
+</div>
+<p>Ensuite, nous incluons les outils nécessaires :</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#pragma once</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Tools/Math/Angle.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Tools/Streams/AutoStreamable.h&quot;</span>
+</pre></div>
+</div>
+<p>Enfin, nous définissons la structure de notre représentation. Dans notre cas, la seule information qui nous intéresse est celle évoquée dans le tutoriel <a class="reference internal" href="module.html#module"><span class="std std-ref">Créer un nouveau module</span></a>, à savoir <em>isThereRedColor</em>, un booléen.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm">* @struct ColorDetect</span>
+<span class="cm">* A struct that represents the requested information from the color detection.</span>
+<span class="cm">*/</span>
+<span class="n">STREAMABLE</span><span class="p">(</span><span class="n">ColorDetect</span><span class="p">,</span>
+<span class="p">{,</span>
+<span class="p">(</span><span class="kt">bool</span><span class="p">)(</span><span class="nb">true</span><span class="p">)</span><span class="w"> </span><span class="n">isThereRedColor</span><span class="p">,</span><span class="w"> </span><span class="cm">/**&lt; Give the information if there is a red color or not */</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>Vous venez ainsi de créer une représentation. Passez maintenant au tutoriel suivant pour l’intégrer dans le fichier de configuration.</p>
+</section>
 </section>
 
 
@@ -489,6 +564,23 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenu
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-code">Le code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explications">Explications</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

@@ -215,13 +215,13 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../projects/communication/index.html">Communication</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../projects/motors/index.html">Moteurs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../projects/motors/walk_controller.html">Controlleur de marche</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../projects/motion-control/index.html">Contrôle de mouvement</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/motion-control/walk_controller.html">Contrôleur de marche</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../projects/vision/index.html">Vision</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../projects/vision/ball_detector.html">Detecteur de balle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../projects/vision/line_detector.html">Detecteur de ligne</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../projects/perception/index.html">Perception</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/perception/ball_detector.html">Détecteur de balle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/perception/line_detector.html">Détecteur de ligne</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../projects/challenges/index.html">Challenges</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
@@ -425,7 +425,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -441,6 +443,14 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contenu </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explications">Explications</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -452,6 +462,21 @@
                   
   <section id="tester-sur-le-robot">
 <span id="test"></span><h1>Tester sur le robot<a class="headerlink" href="#tester-sur-le-robot" title="Lien permanent vers cette rubrique">#</a></h1>
+<p>Dans ce tutoriel, nous allons voir comment procéder aux tests sur le robot en utilisant,
+comme toujours, le cas particulier de la détection d’un objet rouge via la caméra.</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Dans notre cas, seul l’aspect de la couleur des yeux est affecté,
+ce qui permet de réaliser le test directement sur le robot réel.
+Dans d’autres situations, il est recommandé de procéder d’abord en simulation (voir <a class="reference internal" href="../../configuration/simulation.html#simulation"><span class="std std-ref">Déployer en Simulation</span></a>).</p>
+</div>
+<section id="explications">
+<h2>Explications<a class="headerlink" href="#explications" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>Vous avez désormais terminé votre code et vous souhaitez le tester sur le robot.
+Commencez par suivre les instructions détaillées dans <a class="reference internal" href="../../configuration/irl.html#irl"><span class="std std-ref">Déployer sur un Robot Réel</span></a>.</p>
+<p>Une fois ces étapes réalisées, vous devriez obtenir un résultat conforme aux attentes.</p>
+<p>(compléter + tard avec des photos illustrant les résultats).</p>
+</section>
 </section>
 
 
@@ -489,6 +514,22 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenu
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explications">Explications</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

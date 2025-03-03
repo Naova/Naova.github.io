@@ -14,7 +14,7 @@ Créer un nouveau module
 Découvrez comment concevoir et intégrer un nouveau module dans votre projet.
 
 .. toctree::
-   :maxdepth: 0
+   :maxdepth: 1
 
    module
 
@@ -24,7 +24,7 @@ Créer une nouvelle représentation
 Apprenez à développer et à intégrer une nouvelle représentation pour enrichir vos applications.
 
 .. toctree::
-   :maxdepth: -1
+   :maxdepth: 1
 
    representation
 

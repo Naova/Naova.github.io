@@ -8,7 +8,7 @@ Déployer sur un Robot Réel
 
 1. **Préparer le robot**
 
-   - Allumez le robot.
+   - Allumez le robot. (Ajouter des instructions/photos de comment faire)
    - Connectez un câble Ethernet entre le robot et l'ordinateur.
 
 2. **Lancer le déploiement sur le robot**

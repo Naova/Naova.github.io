@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Vision &#8212; Documentation des projets de Naova</title>
+    <title>Contrôleur de marche &#8212; Documentation des projets de Naova</title>
   
   
   
@@ -53,12 +53,12 @@
     <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script src="../../../_static/translations.js"></script>
     <script src="../../../_static/design-tabs.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'source/projects/vision/index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'source/projects/motion-control/walk_controller';</script>
     <link rel="icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Recherche" href="../../../search.html" />
-    <link rel="next" title="Detecteur de balle" href="ball_detector.html" />
-    <link rel="prev" title="Controlleur de marche" href="../motors/walk_controller.html" />
+    <link rel="next" title="Perception" href="../perception/index.html" />
+    <link rel="prev" title="Contrôle de mouvement" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   <meta name="docsearch:version" content="" />
@@ -215,13 +215,13 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../communication/index.html">Communication</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../motors/index.html">Moteurs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../motors/walk_controller.html">Controlleur de marche</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Contrôle de mouvement</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Contrôleur de marche</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Vision</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="ball_detector.html">Detecteur de balle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="line_detector.html">Detecteur de ligne</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../perception/index.html">Perception</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../perception/ball_detector.html">Détecteur de balle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../perception/line_detector.html">Détecteur de ligne</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../challenges/index.html">Challenges</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
@@ -315,7 +315,7 @@
       
       
       
-      <li><a href="https://github.com/Naova/Naova.github.io/edit/main/source/projects/vision/index.rst" target="_blank"
+      <li><a href="https://github.com/Naova/Naova.github.io/edit/main/source/projects/motion-control/walk_controller.rst" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -332,7 +332,7 @@
       
       
       
-      <li><a href="https://github.com/Naova/Naova.github.io/issues/new?title=Issue%20on%20page%20%2Fsource/projects/vision/index.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Naova/Naova.github.io/issues/new?title=Issue%20on%20page%20%2Fsource/projects/motion-control/walk_controller.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Ouvrez un problème"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -362,7 +362,7 @@
       
       
       
-      <li><a href="../../../_sources/source/projects/vision/index.rst" target="_blank"
+      <li><a href="../../../_sources/source/projects/motion-control/walk_controller.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Télécharger le fichier source"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -436,7 +436,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Vision</h1>
+    <h1>Contrôleur de marche</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -450,15 +450,10 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="vision">
-<span id="id1"></span><h1>Vision<a class="headerlink" href="#vision" title="Lien permanent vers cette rubrique">#</a></h1>
-<p>Cette page rassemble la documentation de tous les projets de vision.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ball_detector.html">Detecteur de balle</a></li>
-<li class="toctree-l1"><a class="reference internal" href="line_detector.html">Detecteur de ligne</a></li>
-</ul>
-</div>
+  <section id="controleur-de-marche">
+<span id="walk-controller"></span><h1>Contrôleur de marche<a class="headerlink" href="#controleur-de-marche" title="Lien permanent vers cette rubrique">#</a></h1>
+<p>Blankblankblank blank blankblankblankblank</p>
+<p>Blankblank blank blank blankblankblank blank</p>
 </section>
 
 
@@ -473,20 +468,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../motors/walk_controller.html"
+       href="index.html"
        title="page précédente">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">précédent</p>
-        <p class="prev-next-title">Controlleur de marche</p>
+        <p class="prev-next-title">Contrôle de mouvement</p>
       </div>
     </a>
     <a class="right-next"
-       href="ball_detector.html"
+       href="../perception/index.html"
        title="page suivante">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">Detecteur de balle</p>
+        <p class="prev-next-title">Perception</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

@@ -268,7 +268,7 @@ Il est possible de créer des liens vers d'autres sections ou pages de la docume
 
 2. **Lien vers une autre page de la documentation** ::
 
-    Voir aussi :doc:`autre_page`
+    Voir aussi :ref:`autre_page`
 
    où `autre_page.rst` est un fichier dans le même projet.
 

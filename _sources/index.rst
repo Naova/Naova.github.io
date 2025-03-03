@@ -10,7 +10,7 @@ Cette documentation regroupe les différents projets réalisés au sein de Naova
 dans le but de faciliter la navigation et d'assurer une meilleure transmission d'informations pour les nouveaux membres du club.
 
 Si vous souhaitez ajouter votre propre projet à la documentation, 
-consultez la section `Comment contribuer <https://naova.github.io/source/refs/contributing.html>`_.
+consultez la section :ref:`contributing`.
 
 License
 ^^^^^^^
@@ -45,7 +45,7 @@ Table des matieres
    source/overview/core_concepts
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Ressources
    :titlesonly:
 
@@ -59,8 +59,8 @@ Table des matieres
 
    source/projects/behavior/index
    source/projects/communication/index
-   source/projects/motors/index
-   source/projects/vision/index
+   source/projects/motion-control/index
+   source/projects/perception/index
    source/projects/challenges/index
 
 .. toctree::
