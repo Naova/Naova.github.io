@@ -36,14 +36,12 @@ Table des matieres
    source/configuration/installation
    source/configuration/simulation
    source/configuration/irl
-   source/configuration/troubleshooting_installation
 
 .. toctree::
    :maxdepth: 1
    :caption: Vue d'ensemble
    :titlesonly:
 
-   source/overview/developer_guide
    source/overview/core_concepts
 
 .. toctree::

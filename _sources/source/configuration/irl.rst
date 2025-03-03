@@ -3,35 +3,34 @@
 Déployer sur un Robot Réel
 ==========================
 
-- Préparer le robot
-    Indique comment préparer le robot (connexion, mise à jour du firmware, etc.).
+Étapes de déploiement
+---------------------
 
-    blank
+1. **Préparer le robot**
 
-    
+   - Allumez le robot.
+   - Connectez un câble Ethernet entre le robot et l'ordinateur.
 
-- Configurer la communication avec le robot
-    Détaille comment établir la communication entre le système de contrôle et le robot. 
-    Cela inclut la configuration des réseaux, des adresses IP, et des paramètres de communication.
+2. **Lancer le déploiement sur le robot**
 
-    blank
+   - Compilez le code pour intégrer d'éventuels changements :
 
+     .. code-block:: console
 
-- Lancer le déploiement sur le robot
-    Explique les étapes pour déployer le code directement sur le robot 
-    (compilation, transfert des fichiers nécessaires, exécution des commandes).
+        ./Remake
 
-    blank
+   - Lancez le déploiement en exécutant :
 
+     .. code-block:: console
 
-.. code-block:: console
+        ./bush
 
-    blank
+3. **Compiler via l'interface**
 
-- Vérifications et tests
-    Fournis des instructions pour tester le bon fonctionnement du robot après déploiement 
-    (par exemple, vérifier les capteurs, les actions du robot, etc.).
+   - Dans l'interface, cochez le *Player* voulu et cliquez sur *deploy* pour lancer la compilation.
 
-    blank
+   - L'interface de déploiement s'affiche comme indiqué ci-dessous :
 
-
+     .. figure:: ../_static/configuration/interface_deploy.jpg
+        :width: 80%
+        :alt: Interface de déploiement avec l'option de "Player" et le bouton "Deploy"

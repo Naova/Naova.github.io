@@ -62,7 +62,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="févr. 26, 2025"/>
+    <meta name="docbuild:last-update" content="mars 03, 2025"/>
   </head>
   
   
@@ -186,11 +186,9 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation.html">Déployer en Simulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="irl.html">Déployer sur un Robot Réel</a></li>
-<li class="toctree-l1"><a class="reference internal" href="troubleshooting_installation.html">Résolution de Problèmes</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Vue d'ensemble</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../overview/developer_guide.html">Guide Développeur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../overview/core_concepts.html">Concepts de base</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ressources</span></p>
@@ -401,7 +399,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -417,6 +417,14 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contenu </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etapes-d-installation">Étapes d’installation</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -428,23 +436,80 @@
                   
   <section id="installation">
 <span id="id1"></span><h1>Installation<a class="headerlink" href="#installation" title="Lien permanent vers cette rubrique">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Pré-requis :</strong></p>
 <ul class="simple">
-<li><p>Cloner le repository</p></li>
+<li><p>Faire partie de l’organisation GitHub « Naova »</p></li>
+<li><p>Utiliser Ubuntu (&gt;=20)</p></li>
 </ul>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/Naova/NaovaCode2023.git</span>
+</div>
+<section id="etapes-d-installation">
+<h2>Étapes d’installation<a class="headerlink" href="#etapes-d-installation" title="Lien permanent vers cette rubrique">#</a></h2>
+<ol class="arabic">
+<li><p>Installer les dépendances :</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo apt install git</span>
 </pre></div>
 </div>
+</li>
+<li><p>Générer une clé SSH et l’ajouter à GitHub :</p>
 <ul>
-<li><dl>
-<dt>Installer les dépendances</dt><dd><p>Détaille les étapes pour installer les dépendances</p>
-<p>blank</p>
-</dd>
-</dl>
+<li><p>Générer la clé SSH en exécutant :</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ssh-keygen -t rsa -b 4096 -C &quot;votre_email@example.com&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Suivre les instructions affichées pour compléter la génération.</p></li>
+<li><p>Copier la clé publique en utilisant la commande suivante :</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cat ~/.ssh/id_rsa.pub</span>
+</pre></div>
+</div>
+<p>(Vous pouvez copier le contenu affiché dans votre terminal.)</p>
+</li>
+<li><p>Se connecter à votre compte GitHub et accéder à la section <strong>SSH and GPG keys</strong> pour ajouter votre nouvelle clé.</p></li>
+</ul>
+</li>
+<li><p>Cloner le dépôt Git :</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/Naova/Scripts.git</span>
+</pre></div>
+</div>
+</li>
+<li><p>Lancer le script d’installation :</p>
+<ul>
+<li><p>Se déplacer dans le dossier cloné :</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd Scripts</span>
+</pre></div>
+</div>
+</li>
+<li><p>Donner les droits d’exécution au script :</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">chmod 700 installation.sh</span>
+</pre></div>
+</div>
+</li>
+<li><p>Exécuter le script :</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">./installation.sh</span>
+</pre></div>
+</div>
 </li>
 </ul>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">blank</span>
+</li>
+<li><p>Tester l’installation :</p>
+<ul>
+<li><p>Le script installe le code dans le répertoire <code class="docutils literal notranslate"><span class="pre">~/naova</span></code>.</p></li>
+<li><p>Se déplacer dans le dossier :</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd ~/naova</span>
 </pre></div>
 </div>
+</li>
+<li><p>Lancer SimRobot :</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">./SimRobot</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</section>
 </section>
 
 
@@ -483,6 +548,22 @@
             
             
               
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenu
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etapes-d-installation">Étapes d’installation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
             
           </div>
           <footer class="bd-footer-content">
@@ -511,7 +592,7 @@ Par Les développeurs du projet : Documentation des projets de Naova
   
   <div class="footer-item">
     <p class="last-updated">
-  Mis à jour le févr. 26, 2025.
+  Mis à jour le mars 03, 2025.
   <br/>
 </p>
   </div>
