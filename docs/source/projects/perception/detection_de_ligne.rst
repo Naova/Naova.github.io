@@ -1,6 +1,8 @@
-===========================================
+.. _detection-de-ligne:
+
+==================================
 Détecteur de lignes pour Robot NAO
-===========================================
+==================================
 
 Rapport de projet présenté à l’École de Technologie Supérieure  
 Université du Québec
@@ -20,12 +22,12 @@ Depuis, les lignes peinturées et les conditions d’éclairage moins contraigna
 la détection plus difficile pour le robot. Le détecteur actuel nécessite une calibration  
 longue et reste sensible aux variations de luminosité et aux dégradations du terrain.
 
-.. image:: ../_static/projects/detection_de_ligne/lignesRuban.jpg
+.. image:: ../../_static/projects/detection_de_ligne/lignesRuban.jpg
    :alt: Lignes faites avec du ruban
    :width: 300px
    :align: center
 
-.. image:: ../_static/projects/detection_de_ligne/lignesPeinturees.png
+.. image:: ../../_static/projects/detection_de_ligne/lignesPeinturees.png
    :alt: Lignes peinturées
    :width: 300px
    :align: center

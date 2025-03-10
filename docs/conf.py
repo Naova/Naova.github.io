@@ -169,7 +169,7 @@ html_css_files = ["custom.css"]
 
 html_theme_options = {
     "collapse_navigation": True,
-    "repository_url": "https://github.com/Naova/NaovaRelease",
+    "repository_url": "https://github.com/Naova/Naova.github.io",
     "use_repository_button": True,
     "use_issues_button": True,
     "use_edit_page_button": True,
@@ -183,7 +183,7 @@ html_theme_options = {
     "icon_links": [
         {
             "name": "GitHub",
-            "url": "https://github.com/Naova/NaovaRelease",
+            "url": "https://github.com/Naova/Naova.github.io",
             "icon": "fa-brands fa-square-github",
             "type": "fontawesome",
         },

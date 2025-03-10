@@ -226,7 +226,7 @@ Insertion d'images
 
 Pour ajouter une image ::
 
-   .. image:: ../_static/project_name/nao_robot.png
+   .. image:: ../../_static/project_name/nao_robot.png
       :alt: Nao Robot
       :width: 300px
       :align: center
@@ -268,7 +268,7 @@ Il est possible de créer des liens vers d'autres sections ou pages de la docume
 
 2. **Lien vers une autre page de la documentation** ::
 
-    Voir aussi :doc:`autre_page`
+    Voir aussi :ref:`autre_page`
 
    où `autre_page.rst` est un fichier dans le même projet.
 
