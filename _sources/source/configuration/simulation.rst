@@ -1,45 +1,27 @@
 .. _simulation:
 
 Déployer en Simulation
-=======================
+======================
 
-Étapes de déploiement
----------------------
+- Configurer l'environnement de simulation
+    Décris les étapes pour préparer l'environnement de simulation.
 
-1. **Compiler les modifications**
+    blank
 
-   Pour compiler les changements apportés au code, exécutez :
 
-   .. code-block:: console
+- Lancer la simulation
+    Explique comment lancer la simulation et comment visualiser les résultats.
 
-      ./Remake
+    blank
+    
 
-2. **Lancer la simulation**
+.. code-block:: console
+    
+    blank
+    
 
-   - Démarrez la simulation en lançant :
+- Vérifications et ajustements
+    Fournis des conseils pour vérifier que la simulation fonctionne correctement et comment ajuster les paramètres si nécessaire.
 
-     .. code-block:: console
+    blank
 
-        ./SimRobot
-
-   - Dans le menu *File*, sélectionnez **BHFast.ros2**.
-
-     .. figure:: ../_static/configuration/file_selection.jpg
-        :width: 70%
-        :alt: Capture d'écran de la sélection du fichier bhfast.ros2
-
-   - Dans la console de l'interface, tapez la commande suivante pour démarrer une partie avec un robot :
-
-     .. code-block:: console
-
-        gc playing
-
-   - La commande déclenche l'initialisation du robot, comme illustré ci-dessous :
-
-     .. figure:: ../_static/configuration/gc_playing.jpg
-        :width: 90%
-        :alt: Interface après l'exécution de la commande gc playing
-
-.. note::
-
-    Ajoutez ici d'autres images ou exemples de commandes si nécessaire.

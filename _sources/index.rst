@@ -10,7 +10,7 @@ Cette documentation regroupe les différents projets réalisés au sein de Naova
 dans le but de faciliter la navigation et d'assurer une meilleure transmission d'informations pour les nouveaux membres du club.
 
 Si vous souhaitez ajouter votre propre projet à la documentation, 
-consultez la section :ref:`contributing`.
+consultez la section `Comment contribuer <https://naova.github.io/source/refs/contributing.html>`_.
 
 License
 ^^^^^^^
@@ -30,18 +30,20 @@ Table des matieres
 ^^^^^^^^^^^^^^^^^^
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Configuration
 
    source/configuration/installation
    source/configuration/simulation
    source/configuration/irl
+   source/configuration/troubleshooting_installation
 
 .. toctree::
    :maxdepth: 1
    :caption: Vue d'ensemble
    :titlesonly:
 
+   source/overview/developer_guide
    source/overview/core_concepts
 
 .. toctree::
@@ -49,19 +51,17 @@ Table des matieres
    :caption: Ressources
    :titlesonly:
 
-   source/resources/tutorials/index
-   source/resources/how-to/index
+   source/resources/tutorial
+   source/resources/how_to
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Projets
    :titlesonly:
 
-   source/projects/behavior/index
-   source/projects/communication/index
-   source/projects/motion-control/index
-   source/projects/perception/index
-   source/projects/challenges/index
+   source/projects/controlleur_de_marche
+   source/projects/detection_de_balle
+   source/projects/detection_de_ligne
 
 .. toctree::
    :maxdepth: 1
