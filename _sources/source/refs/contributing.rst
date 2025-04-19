@@ -226,7 +226,7 @@ Insertion d'images
 
 Pour ajouter une image ::
 
-   .. image:: ../../_static/project_name/nao_robot.png
+   .. image:: source/_static/project_name/nao_robot.png
       :alt: Nao Robot
       :width: 300px
       :align: center
