@@ -1,7 +1,7 @@
 Documentation des projets de Naova
 ==================================
 
-.. figure:: source/_static/nao.jpg
+.. figure:: _static/nao.jpg
    :width: 100%
    :alt: Robot Nao debout
 
@@ -33,44 +33,44 @@ Table des matieres
    :maxdepth: 1
    :caption: Configuration
 
-   source/configuration/installation
-   source/configuration/simulation
-   source/configuration/irl
+   configuration/installation
+   configuration/simulation
+   configuration/irl
 
 .. toctree::
    :maxdepth: 1
    :caption: Vue d'ensemble
    :titlesonly:
 
-   source/overview/core_concepts
+   overview/core_concepts
 
 .. toctree::
    :maxdepth: 2
    :caption: Ressources
    :titlesonly:
 
-   source/resources/tutorials/index
-   source/resources/how-to/index
+   resources/tutorials/index
+   resources/how-to/index
 
 .. toctree::
    :maxdepth: 2
    :caption: Projets
    :titlesonly:
 
-   source/projects/behavior/index
-   source/projects/communication/index
-   source/projects/motion-control/index
-   source/projects/perception/index
-   source/projects/challenges/index
+   projects/behavior/index
+   projects/communication/index
+   projects/motion-control/index
+   projects/perception/index
+   projects/challenges/index
 
 .. toctree::
    :maxdepth: 1
    :caption: Références
 
-   source/refs/additional_resources
-   source/refs/contributing
-   source/refs/bibliography
-   source/refs/changelog
+   refs/additional_resources
+   refs/contributing
+   refs/bibliography
+   refs/changelog
 
 .. toctree::
     :hidden:
