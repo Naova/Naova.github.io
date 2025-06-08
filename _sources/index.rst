@@ -1,7 +1,7 @@
 Documentation des projets de Naova
 ==================================
 
-.. figure:: _static/nao.jpg
+.. figure:: source/_static/nao.jpg
    :width: 100%
    :alt: Robot Nao debout
 
