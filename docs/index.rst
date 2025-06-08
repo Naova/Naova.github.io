@@ -33,44 +33,44 @@ Table des matieres
    :maxdepth: 1
    :caption: Configuration
 
-   configuration/installation
-   configuration/simulation
-   configuration/irl
+   source/configuration/installation
+   source/configuration/simulation
+   source/configuration/irl
 
 .. toctree::
    :maxdepth: 1
    :caption: Vue d'ensemble
    :titlesonly:
 
-   overview/core_concepts
+   source/overview/core_concepts
 
 .. toctree::
    :maxdepth: 2
    :caption: Ressources
    :titlesonly:
 
-   resources/tutorials/index
-   resources/how-to/index
+   source/resources/tutorials/index
+   source/resources/how-to/index
 
 .. toctree::
    :maxdepth: 2
    :caption: Projets
    :titlesonly:
 
-   projects/behavior/index
-   projects/communication/index
-   projects/motion-control/index
-   projects/perception/index
-   projects/challenges/index
+   source/projects/behavior/index
+   source/projects/communication/index
+   source/projects/motion-control/index
+   source/projects/perception/index
+   source/projects/challenges/index
 
 .. toctree::
    :maxdepth: 1
    :caption: Références
 
-   refs/additional_resources
-   refs/contributing
-   refs/bibliography
-   refs/changelog
+   source/refs/additional_resources
+   source/refs/contributing
+   source/refs/bibliography
+   source/refs/changelog
 
 .. toctree::
     :hidden:

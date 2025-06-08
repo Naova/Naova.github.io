@@ -83,7 +83,7 @@ autodoc_member_order = "bysource"
 # inherit docstrings from base classes
 autodoc_inherit_docstrings = True
 # BibTeX configuration
-bibtex_bibfiles = ["_static/refs.bib"]
+bibtex_bibfiles = ["source/_static/refs.bib"]
 # generate autosummary even if no references
 autosummary_generate = True
 autosummary_generate_overwrite = False
@@ -156,7 +156,7 @@ import sphinx_book_theme
 html_title = "Documentation des projets de Naova"
 html_theme_path = [sphinx_book_theme.get_html_theme_path()]
 html_theme = "sphinx_book_theme"
-html_favicon = "_static/favicon.ico"
+html_favicon = "source/_static/favicon.ico"
 html_show_copyright = True
 html_show_sphinx = False
 html_last_updated_fmt = ""  # to reveal the build date in the pages meta
@@ -164,7 +164,7 @@ html_last_updated_fmt = ""  # to reveal the build date in the pages meta
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ["_static/css"]
+html_static_path = ["source/_static/css"]
 html_css_files = ["custom.css"]
 
 html_theme_options = {
@@ -177,8 +177,8 @@ html_theme_options = {
     "use_sidenotes": True,
     "logo": {
         "text": "Documentation des projets de Naova",
-        "image_light": "_static/naova_exp.png",
-        "image_dark": "_static/naova_exp_dark.png",
+        "image_light": "source/_static/naova_exp.png",
+        "image_dark": "source/_static/naova_exp_dark.png",
     },
     "icon_links": [
         {
@@ -195,16 +195,15 @@ templates_path = [
     "_templates",
 ]
 
-smv_tag_whitelist = r'^v\d+\.0$'    # pour ne construire que les tags du type v1.0, v2.0 etc
-smv_branch_whitelist = r'^main$'    # pour ne construire que la branche main
-smv_remote_whitelist = r'^origin$'  # pour éviter les forks ou upstream
-smv_latest_version = 'main'
-
-html_context = {
-    'display_github': True,
-    'display_version': True,
-    'versions': []
-}
+# Whitelist pattern for remotes
+smv_remote_whitelist = r"^.*$"
+# Whitelist pattern for branches (set to None to ignore all branches)
+smv_branch_whitelist = os.getenv("SMV_BRANCH_WHITELIST", r"^(main|devel)$")
+# Whitelist pattern for tags (set to None to ignore all tags)Add commentMore actions
+smv_tag_whitelist = os.getenv("SMV_TAG_WHITELIST", r"^v[1-9]\d*\.\d+\.\d+$")
+# html_sidebars = {
+#     "**": ["navbar-logo.html", "versioning.html", "icon-links.html", "search-field.html", "sbt-sidebar-nav.html"]
+# }
 
 html_sidebars = {
     "**": ["navbar-logo.html", "icon-links.html", "search-field.html", "sbt-sidebar-nav.html"]
