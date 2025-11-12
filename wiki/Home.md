@@ -1,112 +1,112 @@
-# NaovaK1 Project Wiki
+# Wiki du Projet NaovaK1
 
-Welcome to the NaovaK1 project documentation!
+Bienvenue sur la documentation du projet NaovaK1 !
 
-## Overview
+## Présentation
 
-This is the official documentation wiki for the NaovaK1 project, hosted on GitHub Pages at [https://naovak1.github.io](https://naovak1.github.io).
+Ceci est le wiki officiel de documentation pour le projet NaovaK1, hébergé sur GitHub Pages à l'adresse [https://naovak1.github.io](https://naovak1.github.io).
 
-## Table of Contents
+## Table des Matières
 
-- [About the Project](#about-the-project)
-- [Getting Started](#getting-started)
-- [Repository Structure](#repository-structure)
-- [Contributing](#contributing)
-- [License](#license)
+- [À Propos du Projet](#à-propos-du-projet)
+- [Démarrage](#démarrage)
+- [Structure du Dépôt](#structure-du-dépôt)
+- [Contribuer](#contribuer)
+- [Licence](#licence)
 - [Contact](#contact)
 
-## About the Project
+## À Propos du Projet
 
-NaovaK1.github.io is a GitHub Pages repository for hosting project content and documentation.
+NaovaK1.github.io est un dépôt GitHub Pages pour l'hébergement de contenu et de documentation du projet.
 
-### Key Features
+### Fonctionnalités Principales
 
-- Static website hosting via GitHub Pages
-- Jekyll-based site generation
-- Open source under MIT License
+- Hébergement de site web statique via GitHub Pages
+- Génération de site basée sur Jekyll
+- Open source sous licence MIT
 
-## Getting Started
+## Démarrage
 
-### Prerequisites
+### Prérequis
 
-To work with this repository locally, you'll need:
+Pour travailler avec ce dépôt localement, vous aurez besoin de :
 
-- Git installed on your machine
-- A text editor or IDE
-- (Optional) Jekyll for local development
+- Git installé sur votre machine
+- Un éditeur de texte ou IDE
+- (Optionnel) Jekyll pour le développement local
 
 ### Installation
 
-1. Clone the repository:
+1. Cloner le dépôt :
    ```bash
    git clone https://github.com/Naova/NaovaK1.github.io.git
    cd NaovaK1.github.io
    ```
 
-2. Make your changes to the content
+2. Apporter vos modifications au contenu
 
-3. Commit and push your changes:
+3. Valider et pousser vos modifications :
    ```bash
    git add .
-   git commit -m "Your commit message"
+   git commit -m "Votre message de commit"
    git push origin main
    ```
 
-### Local Development
+### Développement Local
 
-If you want to test the site locally with Jekyll:
+Si vous souhaitez tester le site localement avec Jekyll :
 
 ```bash
-# Install Jekyll and dependencies
+# Installer Jekyll et les dépendances
 gem install bundler jekyll
 
-# Serve the site locally
+# Servir le site localement
 jekyll serve
 
-# Visit http://localhost:4000 in your browser
+# Visiter http://localhost:4000 dans votre navigateur
 ```
 
-## Repository Structure
+## Structure du Dépôt
 
 ```
 NaovaK1.github.io/
-├── .git/                  # Git repository data
-├── .gitignore            # Git ignore patterns
-├── LICENSE               # MIT License file
-├── README.md             # Repository README
-└── wiki/                 # Project documentation
-    └── Home.md           # This wiki home page
+├── .git/                  # Données du dépôt Git
+├── .gitignore            # Modèles d'exclusion Git
+├── LICENSE               # Fichier de licence MIT
+├── README.md             # README du dépôt
+└── wiki/                 # Documentation du projet
+    └── Home.md           # Page d'accueil du wiki
 ```
 
-## Contributing
+## Contribuer
 
-We welcome contributions to this project! Here's how you can help:
+Nous accueillons les contributions à ce projet ! Voici comment vous pouvez aider :
 
-### How to Contribute
+### Comment Contribuer
 
-1. **Fork the repository** - Create your own copy of the project
-2. **Create a feature branch** - `git checkout -b feature/your-feature-name`
-3. **Make your changes** - Add your contributions
-4. **Commit your changes** - `git commit -m "Add some feature"`
-5. **Push to the branch** - `git push origin feature/your-feature-name`
-6. **Open a Pull Request** - Submit your changes for review
+1. **Forker le dépôt** - Créer votre propre copie du projet
+2. **Créer une branche de fonctionnalité** - `git checkout -b feature/nom-de-votre-fonctionnalite`
+3. **Apporter vos modifications** - Ajouter vos contributions
+4. **Valider vos modifications** - `git commit -m "Ajouter une fonctionnalité"`
+5. **Pousser vers la branche** - `git push origin feature/nom-de-votre-fonctionnalite`
+6. **Ouvrir une Pull Request** - Soumettre vos modifications pour révision
 
-### Guidelines
+### Directives
 
-- Keep commits atomic and well-described
-- Follow existing code/content style
-- Test your changes before submitting
-- Update documentation as needed
+- Garder les commits atomiques et bien décrits
+- Suivre le style de code/contenu existant
+- Tester vos modifications avant de les soumettre
+- Mettre à jour la documentation si nécessaire
 
-## License
+## Licence
 
-This project is licensed under the MIT License - see the [LICENSE](../LICENSE) file for details.
+Ce projet est sous licence MIT - voir le fichier [LICENSE](../LICENSE) pour plus de détails.
 
 ## Contact
 
-- **Repository**: [https://github.com/Naova/NaovaK1.github.io](https://github.com/Naova/NaovaK1.github.io)
-- **GitHub Pages**: [https://naovak1.github.io](https://naovak1.github.io)
+- **Dépôt** : [https://github.com/Naova/NaovaK1.github.io](https://github.com/Naova/NaovaK1.github.io)
+- **GitHub Pages** : [https://naovak1.github.io](https://naovak1.github.io)
 
 ---
 
-*Last updated: November 2025*
+*Dernière mise à jour : Novembre 2025*
