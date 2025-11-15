@@ -24,7 +24,7 @@ La documentation du K1 est organisée en plusieurs sections :
 ## Site Web
 
 La documentation est publiée sur GitHub Pages à l'adresse suivante :  
-[https://naova.github.io](https://naova.github.io)
+[https://naova.github.io](https://naovaK1.github.io)
 
 Pour plus d'informations sur le club Naova, visitez notre site officiel :  
 [Naova Website](https://clubnaova.ca/)
