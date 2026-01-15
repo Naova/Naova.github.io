@@ -23,6 +23,7 @@ import os
 project = "Documentation des projets de Naova"
 copyright = "2024-2025, Les développeurs du projet : Documentation des projets de Naova"
 author = "Les développeurs du projet : Documentation des projets de Naova"
+root_doc = "index"
 
 # -- General configuration ---------------------------------------------------
 
@@ -176,8 +177,9 @@ html_theme_options = {
     "use_sidenotes": True,
     "logo": {
         "text": "Documentation des projets de Naova",
-        "image_light": "source/_static/naova_exp.png",
-        "image_dark": "source/_static/naova_exp_dark.png",
+        "image_light": "_static/naova_exp.png",
+        "image_dark": "_static/naova_exp_dark.png",
+
     },
     "icon_links": [
         {
