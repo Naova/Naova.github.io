@@ -1,8 +1,0 @@
-.. toctree::
-   :caption: Ancienne documentation
-   :hidden:
-
-   Documentation des projets de Naova
-
-
-   Documentation NAO <https://naova.github.io/nao/>
