@@ -57,11 +57,11 @@
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="../overview/core_concepts.html" />
+    <link rel="prev" title="Bibliographie" href="bibliography.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="nov. 15, 2025"/>
+    <meta name="docbuild:last-update" content="janv. 24, 2026"/>
   </head>
   
   
@@ -180,8 +180,17 @@
 </form></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Références</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Configuration</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../configuration/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/simulation.html">Déployer en Simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/irl.html">Déployer sur un Robot Réel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Références</span></p>
 <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="additional_resources.html">Ressources additionnelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Comment contribuer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliographie</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Changelog</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Liens vers les projets</span></p>
@@ -189,6 +198,7 @@
 <li class="toctree-l1"><a class="reference external" href="https://github.com/Naova/NaovaRelease">GitHub</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://clubnaova.ca/">Naova</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://www.etsmtl.ca/">ETS</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://naova.github.io/nao-archive-docs">Ancien site nao</a></li>
 </ul>
 
     </div>
@@ -399,8 +409,18 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changelog">Changelog</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">[0.1.0] - 2025-11-13</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#added">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-0">[v1.0]</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ajoute">Ajouté</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#v0-1">[v0.1]</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Ajouté</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modifie">Modifié</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#corrige">Corrigé</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#v0-0">[v0.0]</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Ajouté</a></li>
 </ul>
 </li>
 </ul>
@@ -420,14 +440,64 @@
 <span id="id1"></span><h1>Changelog<a class="headerlink" href="#changelog" title="Lien permanent vers cette rubrique">#</a></h1>
 <section id="changelog">
 <h2>Changelog<a class="headerlink" href="#changelog" title="Lien permanent vers cette rubrique">#</a></h2>
-<section id="id1">
-<h3>[0.1.0] - 2025-11-13<a class="headerlink" href="#id1" title="Lien permanent vers cette rubrique">#</a></h3>
-<section id="added">
-<h4>Added<a class="headerlink" href="#added" title="Lien permanent vers cette rubrique">#</a></h4>
+<p>Ce fichier suit les changements notables apportés à la documentation du projet <a class="reference external" href="https://github.com/Naova/Naova.github.io">Naova.github.io</a>, selon le format <code class="docutils literal notranslate"><span class="pre">vx.y</span></code>.</p>
 <ul class="simple">
-<li><p>Création de la documentation du robot K1</p></li>
-<li><p>Ajout des fichiers : README, index.rst, sections hardware/software/etc.</p></li>
-<li><p>Ajout de l’arborescence du projet K1 dans le dossier <code class="docutils literal notranslate"><span class="pre">projects/</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> s’incrémente lors de <strong>refontes majeures</strong> (remplacement ou suppression d’une documentation existante pour un projet).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">y</span></code> s’incrémente à chaque <strong>ajout</strong>, <strong>amélioration</strong> ou <strong>correction mineure</strong> de contenu.</p></li>
+</ul>
+<hr class="docutils" />
+<section id="v1-0">
+<h3>[v1.0]<a class="headerlink" href="#v1-0" title="Lien permanent vers cette rubrique">#</a></h3>
+<section id="ajoute">
+<h4>Ajouté<a class="headerlink" href="#ajoute" title="Lien permanent vers cette rubrique">#</a></h4>
+<ul class="simple">
+<li><p>Fonction de génération multiversion de la documentation.</p></li>
+<li><p>Support du tag Git <code class="docutils literal notranslate"><span class="pre">vX.0</span></code> uniquement.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="v0-1">
+<h3>[v0.1]<a class="headerlink" href="#v0-1" title="Lien permanent vers cette rubrique">#</a></h3>
+<section id="id1">
+<h4>Ajouté<a class="headerlink" href="#id1" title="Lien permanent vers cette rubrique">#</a></h4>
+<ul class="simple">
+<li><p>Création des pages d’installation, de configuration et des tutos de création de module.</p></li>
+<li><p>Ajout d’un fichier <code class="docutils literal notranslate"><span class="pre">CONTRIBUTORS.md</span></code> et d’un <code class="docutils literal notranslate"><span class="pre">README.md</span></code>.</p></li>
+<li><p>Mise en place de la structure <code class="docutils literal notranslate"><span class="pre">docs/</span></code> avec Sphinx.</p></li>
+<li><p>Ajout d’un guide RST basique.</p></li>
+<li><p>Pages de références initialisées (<code class="docutils literal notranslate"><span class="pre">additional_resources</span></code>, <code class="docutils literal notranslate"><span class="pre">bibliography</span></code>, <code class="docutils literal notranslate"><span class="pre">contributing</span></code>).</p></li>
+<li><p>Début des sections <code class="docutils literal notranslate"><span class="pre">overview</span></code>, <code class="docutils literal notranslate"><span class="pre">projects</span></code>, <code class="docutils literal notranslate"><span class="pre">resources</span></code>, <code class="docutils literal notranslate"><span class="pre">how-to</span></code>.</p></li>
+</ul>
+</section>
+<section id="modifie">
+<h4>Modifié<a class="headerlink" href="#modifie" title="Lien permanent vers cette rubrique">#</a></h4>
+<ul class="simple">
+<li><p>Traduction des titres de navigation en français.</p></li>
+<li><p>Modification de l’apparence (changement du logo ÉTS par celui de Naova).</p></li>
+<li><p>Réorganisation des pages (ressources, projets, etc.).</p></li>
+<li><p>Amélioration de l’affichage de la page d’accueil et refonte légère de la structure des tutoriels.</p></li>
+</ul>
+</section>
+<section id="corrige">
+<h4>Corrigé<a class="headerlink" href="#corrige" title="Lien permanent vers cette rubrique">#</a></h4>
+<ul class="simple">
+<li><p>Plusieurs fautes de frappe dans les pages.</p></li>
+<li><p>Liens brisés dans <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> et les pages de contribution.</p></li>
+<li><p>Problème de branche dans le workflow de déploiement GitHub Actions.</p></li>
+<li><p>Conditions de déclenchement du workflow de PR corrigées.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="v0-0">
+<h3>[v0.0]<a class="headerlink" href="#v0-0" title="Lien permanent vers cette rubrique">#</a></h3>
+<section id="id2">
+<h4>Ajouté<a class="headerlink" href="#id2" title="Lien permanent vers cette rubrique">#</a></h4>
+<ul class="simple">
+<li><p>Initialisation du dépôt.</p></li>
+<li><p>Première structure de site (fichiers <code class="docutils literal notranslate"><span class="pre">.rst</span></code>, configuration Sphinx).</p></li>
+<li><p>Fichier <code class="docutils literal notranslate"><span class="pre">LICENSE</span></code>.</p></li>
 </ul>
 </section>
 </section>
@@ -446,12 +516,12 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../overview/core_concepts.html"
+       href="bibliography.html"
        title="page précédente">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">précédent</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">Bibliographie</p>
       </div>
     </a>
 </div>
@@ -472,8 +542,18 @@
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changelog">Changelog</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">[0.1.0] - 2025-11-13</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#added">Added</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#v1-0">[v1.0]</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ajoute">Ajouté</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#v0-1">[v0.1]</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Ajouté</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modifie">Modifié</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#corrige">Corrigé</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#v0-0">[v0.0]</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Ajouté</a></li>
 </ul>
 </li>
 </ul>
@@ -511,7 +591,7 @@ Par Les développeurs du projet : Documentation des projets de Naova
   
   <div class="footer-item">
     <p class="last-updated">
-  Mis à jour le nov. 15, 2025.
+  Mis à jour le janv. 24, 2026.
   <br/>
 </p>
   </div>

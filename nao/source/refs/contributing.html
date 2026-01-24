@@ -1,0 +1,795 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="fr" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Comment contribuer &#8212; Documentation des projets de Naova</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/home/runner/.local/lib/python3.12/site-packages/sphinxcontrib/icon/node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="/home/runner/.local/lib/python3.12/site-packages/sphinxcontrib/icon/node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/translations.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'nao/source/refs/contributing';</script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Recherche" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="fr"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="janv. 24, 2026"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Passer au contenu principal</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Haut de page</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Alerte de version"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/naova_exp.png" class="logo__image only-light" alt=""/>
+    <img src="../../../_static/naova_exp_dark.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">Documentation des projets de Naova</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Quick Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Naova/Naova.github.io" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Configuration</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../source/configuration/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/configuration/simulation.html">Déployer en Simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/configuration/irl.html">Déployer sur un Robot Réel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Références</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../source/refs/additional_resources.html">Ressources additionnelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/refs/contributing.html">Comment contribuer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/refs/bibliography.html">Bibliographie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/refs/changelog.html">Changelog</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Liens vers les projets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Naova/NaovaRelease">GitHub</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://clubnaova.ca/">Naova</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.etsmtl.ca/">ETS</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://naova.github.io/nao-archive-docs">Ancien site nao</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Naova/Naova.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Dépôt source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Naova/Naova.github.io/edit/main/nao/source/refs/contributing.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Naova/Naova.github.io/issues/new?title=Issue%20on%20page%20%2Fnao/source/refs/contributing.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Ouvrez un problème"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Téléchargez cette page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/nao/source/refs/contributing.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Télécharger le fichier source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimer au format PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Mode plein écran"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Thème" data-bs-title="Thème"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Clair"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Sombre"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="Paramètres système"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Comment contribuer</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenu </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etapes-a-suivre">Étapes à suivre</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nouvelles-modifications">Nouvelles modifications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bon-a-savoir-sur-l-ecriture-en-rst">Bon à savoir sur l’écriture en RST</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insertion-de-liens">Insertion de liens</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mise-en-forme-du-texte">Mise en forme du texte</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creer-des-sous-sections">Créer des sous-sections</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insertion-d-images">Insertion d’images</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insertion-de-videos">Insertion de vidéos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references-a-d-autres-pages">Références à d’autres pages</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="comment-contribuer">
+<span id="contributing"></span><h1>Comment contribuer<a class="headerlink" href="#comment-contribuer" title="Lien permanent vers cette rubrique">#</a></h1>
+<p>Une fois que vous avez terminé un projet chez Naova, il vous sera demandé de le documenter sur ce site.
+Cette page vous guidera dans le processus.</p>
+<section id="etapes-a-suivre">
+<h2>Étapes à suivre<a class="headerlink" href="#etapes-a-suivre" title="Lien permanent vers cette rubrique">#</a></h2>
+<ol class="arabic simple">
+<li><p>Exécutez la commande suivante pour cloner le dépôt :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/Naova/Naova.github.io.git</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Ensuite, entrez dans le répertoire du projet :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd Naova.github.io</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Pour mettre votre dépôt local à jour avec le dernier état de la branche principale, exécutez :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git fetch origin</span>
+<span class="go">git checkout main</span>
+<span class="go">git reset --hard origin/main</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Créez une nouvelle branche avec la commande suivante :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git checkout -b nom_de_votre_projet</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Créez un fichier nommé <cite>nom_de_votre_projet.rst</cite> dans le dossier <cite>docs/source/projects/</cite>.</p></li>
+<li><p>Au début du fichier, ajoutez les lignes suivantes :</p></li>
+</ol>
+<div class="highlight-RST notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_nom_de_votre_projet:</span>
+
+<span class="gh">Titre</span>
+<span class="gh">=====</span>
+</pre></div>
+</div>
+<p>Veillez à placer un underscore avant le nom de votre projet et à vous assurer que les signes égal sous le titre sont de la même longueur.</p>
+<ol class="arabic simple" start="7">
+<li><p>Ajoutez votre projet à <cite>index.rst</cite> dans la section « Projets ».</p></li>
+<li><p>Documentez votre projet dans le fichier <cite>.rst</cite>. Une fois que c’est fait pour construire et ouvrir la documentation localement entrez :</p></li>
+</ol>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" data-sync-group="os" data-sync-id="linux" for="sd-tab-item-0">
+<i class="fa-brands fa-linux"></i> Linux</label><div class="sd-tab-content docutils">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Nous l’avons testé seulement sur Ubuntu 22.04LTS.</p>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">rm -rf docs/_build &amp;&amp; ./naova.sh</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" data-sync-group="os" data-sync-id="windows" for="sd-tab-item-1">
+<i class="fa-brands fa-windows"></i> Windows</label><div class="sd-tab-content docutils">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>WIP</p>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">naova.bat</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="9">
+<li><p>Assurez-vous que votre utilisateur Git local est à jour, ou exécutez :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git config --global user.email &quot;email@example.com&quot;</span>
+<span class="go">git config --global user.name &quot;username&quot;</span>
+</pre></div>
+</div>
+<p>C’est l’utilisateur et l’email qui apparaîtront dans l’historique GitHub.</p>
+<ol class="arabic simple" start="10">
+<li><p>Exécutez la commande suivante pour sélectionner les modifications que vous souhaitez ajouter :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git add -p</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="11">
+<li><p>Validez vos modifications avec la commande suivante :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git commit -m &quot;Description du changement&quot;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="12">
+<li><p>Forkez <a class="reference external" href="https://github.com/Naova/Naova.github.io#fork-destination-box">Naova/Naova.github.io</a>.</p></li>
+<li><p>Ajoutez le dépôt forké avec la commande suivante :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git remote add fork https://github.com/username/Naova.github.io.git</span>
+</pre></div>
+</div>
+<p><strong>Remplacez</strong> <cite>username</cite> par votre nom d’utilisateur GitHub.</p>
+<ol class="arabic simple" start="14">
+<li><p>Récupérez les mises à jour de votre fork avec la commande suivante :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git fetch fork</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="15">
+<li><p>Poussez votre branche vers votre fork avec la commande suivante :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git push fork</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="16">
+<li><p>Rendez-vous sur votre fork sur GitHub à l’adresse suivante : <cite>https://github.com/username/Naova.github.io</cite>.</p></li>
+<li><p>Cliquez sur le bouton <cite>New pull request</cite>.</p></li>
+<li><p>Dans la liste déroulante <cite>base</cite>, sélectionnez <cite>main</cite>, car vous souhaitez soumettre une PR vers cette branche.</p></li>
+<li><p>Dans la liste déroulante <cite>compare</cite>, sélectionnez votre branche (<cite>nom_de_votre_contribution</cite>).</p></li>
+<li><p>Passez en revue vos modifications et cliquez sur <cite>Create pull request</cite>.</p></li>
+<li><p>Attendez que tous les tests automatisés soient passés.</p></li>
+<li><p>La PR sera approuvée ou rejetée après examen par l’équipe.</p></li>
+</ol>
+</section>
+<section id="nouvelles-modifications">
+<h2>Nouvelles modifications<a class="headerlink" href="#nouvelles-modifications" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>Pour continuer avec une nouvelle modification, revenez à l’étape 3.
+Pour revenir à votre PR et apporter de nouvelles modifications :</p>
+<ol class="arabic simple">
+<li><p>Exécutez la commande suivante pour mettre de côté les modifications en cours :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git stash</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Exécutez la commande suivante pour revenir à votre branche de contribution :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git checkout nom_de_votre_contribution</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Répétez les étapes 10 et 11.</p></li>
+<li><p>Poussez vos modifications à nouveau avec la commande suivante :</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git push fork</span>
+</pre></div>
+</div>
+<p>La pull request sera automatiquement mise à jour.</p>
+</section>
+<section id="bon-a-savoir-sur-l-ecriture-en-rst">
+<h2>Bon à savoir sur l’écriture en RST<a class="headerlink" href="#bon-a-savoir-sur-l-ecriture-en-rst" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>Le langage <strong>reStructuredText (RST)</strong> est utilisé pour la documentation technique et est largement adopté par <strong>Sphinx</strong>.
+Voici les principales fonctionnalités utiles pour rédiger efficacement vos documents.</p>
+<section id="insertion-de-liens">
+<h3>Insertion de liens<a class="headerlink" href="#insertion-de-liens" title="Lien permanent vers cette rubrique">#</a></h3>
+<p>Il existe plusieurs façons d’ajouter des liens en RST :</p>
+<ol class="arabic">
+<li><p><strong>Lien simple intégré dans le texte</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Voir la documentation officielle `Sphinx &lt;https://www.sphinx-doc.org/&gt;`_.
+</pre></div>
+</div>
+</li>
+<li><p><strong>Lien nommé (réutilisable dans plusieurs endroits du document)</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. _sphinx-docs: https://www.sphinx-doc.org/
+
+Consultez la `documentation Sphinx &lt;sphinx-docs_&gt;`_.
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="mise-en-forme-du-texte">
+<h3>Mise en forme du texte<a class="headerlink" href="#mise-en-forme-du-texte" title="Lien permanent vers cette rubrique">#</a></h3>
+<ul>
+<li><p><strong>Gras</strong> : <code class="docutils literal notranslate"><span class="pre">**Texte</span> <span class="pre">en</span> <span class="pre">gras**</span></code> → <strong>Texte en gras</strong></p></li>
+<li><p><em>Italique</em> : <code class="docutils literal notranslate"><span class="pre">*Texte</span> <span class="pre">en</span> <span class="pre">italique*</span></code> → <em>Texte en italique</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Texte</span> <span class="pre">en</span> <span class="pre">monospace</span></code> : <code class="docutils literal notranslate"><span class="pre">`code`</span></code> → <cite>code</cite></p></li>
+<li><p>Liste à puces</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Élément</span> <span class="mi">1</span>
+<span class="o">-</span> <span class="n">Élément</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</li>
+<li><p>Liste numérotée</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">Premier</span> <span class="n">élément</span>
+<span class="mf">2.</span> <span class="n">Deuxième</span> <span class="n">élément</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="creer-des-sous-sections">
+<h3>Créer des sous-sections<a class="headerlink" href="#creer-des-sous-sections" title="Lien permanent vers cette rubrique">#</a></h3>
+<p>RST permet d’organiser un document en sections et sous-sections en utilisant différentes ponctuations</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Titre</span> <span class="n">principal</span>
+<span class="o">===============</span>
+
+<span class="n">Section</span>
+<span class="o">-------</span>
+
+<span class="n">Sous</span><span class="o">-</span><span class="n">section</span>
+<span class="o">^^^^^^^^^^^^</span>
+
+<span class="n">Sous</span><span class="o">-</span><span class="n">sous</span><span class="o">-</span><span class="n">section</span>
+<span class="sd">&quot;&quot;&quot;&quot;&quot;&quot;</span><span class="s2">&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="insertion-d-images">
+<h3>Insertion d’images<a class="headerlink" href="#insertion-d-images" title="Lien permanent vers cette rubrique">#</a></h3>
+<p>Pour ajouter une image</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. image:: source/_static/project_name/nao_robot.png
+   :alt: Nao Robot
+   :width: 300px
+   :align: center
+
+ Cela affichera `source/_static/project_name/nao_robot.png` avec une largeur de **300px** et alignée au centre.
+</pre></div>
+</div>
+</section>
+<section id="insertion-de-videos">
+<h3>Insertion de vidéos<a class="headerlink" href="#insertion-de-videos" title="Lien permanent vers cette rubrique">#</a></h3>
+<p>Les vidéos peuvent être intégrées sous forme de liens ou via HTML brut si nécessaire :</p>
+<ol class="arabic">
+<li><p><strong>Lien vers une vidéo YouTube</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Voir la démonstration sur YouTube : `Vidéo RoboCup &lt;https://www.youtube.com/watch?v=xvFZjo5PgG0&gt;`_.
+</pre></div>
+</div>
+</li>
+<li><p><strong>HTML pour intégrer directement une vidéo</strong> (nécessite <cite>html</cite> dans Sphinx)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">raw</span><span class="p">::</span> <span class="n">html</span>
+    <span class="o">&lt;</span><span class="n">iframe</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;560&quot;</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;315&quot;</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://www.youtube.com/embed/xvFZjo5PgG0&quot;</span> <span class="n">frameborder</span><span class="o">=</span><span class="s2">&quot;0&quot;</span> <span class="n">allowfullscreen</span><span class="o">&gt;&lt;/</span><span class="n">iframe</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="references-a-d-autres-pages">
+<h3>Références à d’autres pages<a class="headerlink" href="#references-a-d-autres-pages" title="Lien permanent vers cette rubrique">#</a></h3>
+<p>Il est possible de créer des liens vers d’autres sections ou pages de la documentation.</p>
+<ol class="arabic">
+<li><p><strong>Lien vers une section de la même page</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Voir la section :ref:`Insertion d&#39;images &lt;insertion-images&gt;`.
+</pre></div>
+</div>
+<p>Pour que cela fonctionne, la section doit être marquée avec une <strong>étiquette</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">_insertion</span><span class="o">-</span><span class="n">images</span><span class="p">:</span>
+
+   <span class="n">Insertion</span> <span class="n">d</span><span class="s1">&#39;images</span>
+   <span class="o">------------------</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Lien vers une autre page de la documentation</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Voir aussi :ref:`autre_page`
+</pre></div>
+</div>
+<p>où <cite>autre_page.rst</cite> est un fichier dans le même projet.</p>
+</li>
+<li><p><strong>Lien vers une référence bibliographique</strong> (avec <cite>sphinxcontrib-bibtex</cite>)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Voir</span> <span class="n">l</span><span class="s1">&#39;article :cite:`kali2021walking`</span>
+</pre></div>
+</div>
+<p>La citation doit être définie dans un fichier <cite>.bib</cite> inclus dans la documentation.</p>
+</li>
+</ol>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenu
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etapes-a-suivre">Étapes à suivre</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nouvelles-modifications">Nouvelles modifications</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bon-a-savoir-sur-l-ecriture-en-rst">Bon à savoir sur l’écriture en RST</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insertion-de-liens">Insertion de liens</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mise-en-forme-du-texte">Mise en forme du texte</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creer-des-sous-sections">Créer des sous-sections</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insertion-d-images">Insertion d’images</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insertion-de-videos">Insertion de vidéos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references-a-d-autres-pages">Références à d’autres pages</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Par Les développeurs du projet : Documentation des projets de Naova
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024-2025, Les développeurs du projet : Documentation des projets de Naova.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Mis à jour le janv. 24, 2026.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

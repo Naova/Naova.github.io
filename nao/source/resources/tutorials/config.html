@@ -1,0 +1,821 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="fr" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Ajouter la représentation au fichier de configuration &#8212; Documentation des projets de Naova</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/home/runner/.local/lib/python3.12/site-packages/sphinxcontrib/icon/node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="/home/runner/.local/lib/python3.12/site-packages/sphinxcontrib/icon/node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../../_static/translations.js"></script>
+    <script src="../../../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'nao/source/resources/tutorials/config';</script>
+    <link rel="icon" href="../../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Recherche" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="fr"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="janv. 24, 2026"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Passer au contenu principal</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Haut de page</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Alerte de version"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/naova_exp.png" class="logo__image only-light" alt=""/>
+    <img src="../../../../_static/naova_exp_dark.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">Documentation des projets de Naova</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Quick Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Naova/Naova.github.io" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Configuration</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../source/configuration/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../source/configuration/simulation.html">Déployer en Simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../source/configuration/irl.html">Déployer sur un Robot Réel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Références</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../source/refs/additional_resources.html">Ressources additionnelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../source/refs/contributing.html">Comment contribuer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../source/refs/bibliography.html">Bibliographie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../source/refs/changelog.html">Changelog</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Liens vers les projets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Naova/NaovaRelease">GitHub</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://clubnaova.ca/">Naova</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.etsmtl.ca/">ETS</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://naova.github.io/nao-archive-docs">Ancien site nao</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Naova/Naova.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Dépôt source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Naova/Naova.github.io/edit/main/nao/source/resources/tutorials/config.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Naova/Naova.github.io/issues/new?title=Issue%20on%20page%20%2Fnao/source/resources/tutorials/config.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Ouvrez un problème"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Téléchargez cette page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/nao/source/resources/tutorials/config.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Télécharger le fichier source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimer au format PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Mode plein écran"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Thème" data-bs-title="Thème"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Clair"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Sombre"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="Paramètres système"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Ajouter la représentation au fichier de configuration</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenu </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-code">Le code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explications">Explications</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="ajouter-la-representation-au-fichier-de-configuration">
+<span id="config"></span><h1>Ajouter la représentation au fichier de configuration<a class="headerlink" href="#ajouter-la-representation-au-fichier-de-configuration" title="Lien permanent vers cette rubrique">#</a></h1>
+<p>Dans ce tutoriel, nous allons voir comment ajouter la nouvelle représentation au fichier de configuration,
+en utilisant toujours le cas précis de la détection d’un objet rouge via la caméra.</p>
+<section id="le-code">
+<h2>Le code<a class="headerlink" href="#le-code" title="Lien permanent vers cette rubrique">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-code" viewBox="0 0 16 16" aria-hidden="true"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"></path></svg></span><span class="sd-summary-text">Extrait du fichier de configuration</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="na">defaultRepresentations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">[</span>
+<span class="w">    </span><span class="na">GoalPostsPercept,</span>
+<span class="w">    </span><span class="na">ReplayWalkRequestGenerator,</span>
+<span class="na">];</span>
+<span class="na">threads</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">[</span>
+<span class="w">    </span><span class="na">{</span>
+<span class="w">        </span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Upper</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">priority</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">debugReceiverSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2800000</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">debugSenderSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">5200000</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">debugSenderInfrastructureSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">100000</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">executionUnit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Perception</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">representationProviders</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">[</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">OtherFieldBoundary</span><span class="c1">; provider = LowerProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">OtherGoalPostsPercept</span><span class="c1">; provider = LowerProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">OtherObstaclesPerceptorData</span><span class="c1">; provider = LowerProvider;},</span>
+
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">AutoExposureWeightTable</span><span class="c1">; provider = AutoExposureWeightTableProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BallPercept</span><span class="c1">; provider = BallPerceptor;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BallSpecification</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BallSpots</span><span class="c1">; provider = BallSpotsProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BodyContour</span><span class="c1">; provider = BodyContourProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CameraImage</span><span class="c1">; provider = CameraProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CameraInfo</span><span class="c1">; provider = CameraProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CameraIntrinsics</span><span class="c1">; provider = CameraProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CameraMatrix</span><span class="c1">; provider = CameraMatrixProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CameraSettings</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CameraStatus</span><span class="c1">; provider = CameraProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CirclePercept</span><span class="c1">; provider = LinePerceptor;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CNSImage</span><span class="c1">; provider = CNSImageProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CNSPenaltyMarkRegions</span><span class="c1">; provider = PenaltyMarkRegionsProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CNSRegions</span><span class="c1">; provider = CNSRegionsProvider;},</span>
+<span class="hll"><span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ColorDetect</span><span class="c1">; provider = ColorDetector;},</span>
+</span><span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ColorScanLineRegionsHorizontal</span><span class="c1">; provider = ScanLineRegionizer;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ColorScanLineRegionsVerticalClipped</span><span class="c1">; provider = ScanLineRegionizer;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ECImage</span><span class="c1">; provider = ECImageProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FieldBoundary</span><span class="c1">; provider = FieldBoundaryProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FieldDimensions</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FieldLineIntersections</span><span class="c1">; provider = FieldLinesProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FieldLines</span><span class="c1">; provider = FieldLinesProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FrameInfo</span><span class="c1">; provider = CameraProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ImageCoordinateSystem</span><span class="c1">; provider = CoordinateSystemProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">IntersectionsPercept</span><span class="c1">; provider = IntersectionsProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">JerseyClassifier</span><span class="c1">; provider = JerseyClassifierProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">JPEGImage</span><span class="c1">; provider = CameraProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">LinesPercept</span><span class="c1">; provider = LinePerceptor;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ObstaclesFieldPercept</span><span class="c1">; provider = PlayersDeeptector;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ObstaclesImagePercept</span><span class="c1">; provider = PlayersDeeptector;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ObstaclesPerceptorData</span><span class="c1">; provider = PlayersDeeptector;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">PenaltyMarkPercept</span><span class="c1">; provider = PenaltyMarkPerceptor;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">PenaltyMarkRegions</span><span class="c1">; provider = PenaltyMarkRegionsProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">RelativeFieldColors</span><span class="c1">; provider = RelativeFieldColorsProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">RelativeFieldColorsParameters</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">RobotCameraMatrix</span><span class="c1">; provider = RobotCameraMatrixProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">RobotDimensions</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ScanGrid</span><span class="c1">; provider = ScanGridProvider;},</span>
+<span class="w">        </span><span class="na">];</span>
+<span class="w">    </span><span class="na">}, {</span>
+<span class="w">        </span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Lower</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">priority</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">debugReceiverSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1000000</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">debugSenderSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2000000</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">debugSenderInfrastructureSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">100000</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">executionUnit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Perception</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">representationProviders</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">[</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">OtherFieldBoundary</span><span class="c1">; provider = UpperProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">OtherGoalPostsPercept</span><span class="c1">; provider = UpperProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">OtherObstaclesPerceptorData</span><span class="c1">; provider = UpperProvider;},</span>
+
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">AutoExposureWeightTable</span><span class="c1">; provider = AutoExposureWeightTableProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BallPercept</span><span class="c1">; provider = BallPerceptor;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BallSpecification</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BallSpots</span><span class="c1">; provider = BallSpotsProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BodyContour</span><span class="c1">; provider = BodyContourProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CameraImage</span><span class="c1">; provider = CameraProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CameraInfo</span><span class="c1">; provider = CameraProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CameraIntrinsics</span><span class="c1">; provider = CameraProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CameraMatrix</span><span class="c1">; provider = CameraMatrixProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CameraSettings</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CameraStatus</span><span class="c1">; provider = CameraProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CirclePercept</span><span class="c1">; provider = LinePerceptor;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CNSImage</span><span class="c1">; provider = CNSImageProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CNSPenaltyMarkRegions</span><span class="c1">; provider = PenaltyMarkRegionsProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CNSRegions</span><span class="c1">; provider = CNSRegionsProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ColorScanLineRegionsHorizontal</span><span class="c1">; provider = ScanLineRegionizer;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ColorScanLineRegionsVerticalClipped</span><span class="c1">; provider = ScanLineRegionizer;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ECImage</span><span class="c1">; provider = ECImageProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FieldBoundary</span><span class="c1">; provider = FieldBoundaryProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FieldDimensions</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FieldLineIntersections</span><span class="c1">; provider = FieldLinesProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FieldLines</span><span class="c1">; provider = FieldLinesProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FrameInfo</span><span class="c1">; provider = CameraProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ImageCoordinateSystem</span><span class="c1">; provider = CoordinateSystemProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">IntersectionsPercept</span><span class="c1">; provider = IntersectionsProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">JerseyClassifier</span><span class="c1">; provider = JerseyClassifierProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">JPEGImage</span><span class="c1">; provider = CameraProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">LinesPercept</span><span class="c1">; provider = LinePerceptor;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ObstaclesFieldPercept</span><span class="c1">; provider = PlayersDeeptector;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ObstaclesImagePercept</span><span class="c1">; provider = PlayersDeeptector;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ObstaclesPerceptorData</span><span class="c1">; provider = PlayersDeeptector;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">PenaltyMarkPercept</span><span class="c1">; provider = PenaltyMarkPerceptor;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">PenaltyMarkRegions</span><span class="c1">; provider = PenaltyMarkRegionsProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">RelativeFieldColors</span><span class="c1">; provider = RelativeFieldColorsProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">RelativeFieldColorsParameters</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">RobotCameraMatrix</span><span class="c1">; provider = RobotCameraMatrixProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">RobotDimensions</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ScanGrid</span><span class="c1">; provider = ScanGridProvider;},</span>
+<span class="w">        </span><span class="na">];</span>
+<span class="w">    </span><span class="na">},{</span>
+<span class="w">        </span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Cognition</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">priority</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">debugReceiverSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2000000</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">debugSenderSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2000000</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">debugSenderInfrastructureSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">200000</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">executionUnit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Cognition</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">representationProviders</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">[</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BallPercept</span><span class="c1">; provider = PerceptionBallPerceptProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BodyContour</span><span class="c1">; provider = PerceptionBodyContourProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CameraInfo</span><span class="c1">; provider = PerceptionCameraInfoProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CameraMatrix</span><span class="c1">; provider = PerceptionCameraMatrixProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CameraStatus</span><span class="c1">; provider = PerceptionCameraStatusProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CirclePercept</span><span class="c1">; provider = PerceptionCirclePerceptProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FieldBoundary</span><span class="c1">; provider = PerceptionFieldBoundaryProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FieldLines</span><span class="c1">; provider = PerceptionFieldLinesProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FieldLineIntersections</span><span class="c1">; provider = PerceptionFieldLineIntersectionsProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FrameInfo</span><span class="c1">; provider = PerceptionFrameInfoProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ImageCoordinateSystem</span><span class="c1">; provider = PerceptionImageCoordinateSystemProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">IntersectionsPercept</span><span class="c1">; provider = PerceptionIntersectionsPerceptProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">LinesPercept</span><span class="c1">; provider = PerceptionLinesPerceptProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ObstaclesFieldPercept</span><span class="c1">; provider = PerceptionObstaclesFieldPerceptProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">PenaltyMarkPercept</span><span class="c1">; provider = PerceptionPenaltyMarkPerceptProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">RobotCameraMatrix</span><span class="c1">; provider = PerceptionRobotCameraMatrixProvider;},</span>
+
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ActivationGraph</span><span class="c1">; provider = BehaviorControl;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">AlternativeRobotPoseHypothesis</span><span class="c1">; provider = AlternativeRobotPoseProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ArmMotionRequest</span><span class="c1">; provider = BehaviorControl;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">AudioData</span><span class="c1">; provider = AudioProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BallContactChecker</span><span class="c1">; provider = BallContactCheckerProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BallDropInModel</span><span class="c1">; provider = BallDropInLocator;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BallInGoal</span><span class="c1">; provider = BallInGoalTracker;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BallModel</span><span class="c1">; provider = BallStateEstimator;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BallPlayerStrategy</span><span class="c1">; provider = BallPlayerStrategyProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BallSpecification</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BehaviorStatus</span><span class="c1">; provider = BehaviorControl;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">NaovaMessageOutputGenerator</span><span class="c1">; provider = TeamMessageHandler;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CameraCalibration</span><span class="c1">; provider = AutomaticCameraCalibrator;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CalibrationRequest</span><span class="c1">; provider = BehaviorControl;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CameraCalibrationStatus</span><span class="c1">; provider = AutomaticCameraCalibrator;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CameraResolutionRequest</span><span class="c1">; provider = AutomaticCameraCalibrator;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">CurrentTactic</span><span class="c1">; provider = TacticProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">DamageConfigurationBody</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">DamageConfigurationHead</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">DynamicSupporterPositionning</span><span class="c1">; provider = DynamicSupporterPositionningProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">EnhancedKeyStates</span><span class="c1">; provider = KeyStateEnhancer;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ExtendedGameInfo</span><span class="c1">; provider = ExtendedGameInfoProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FieldBall</span><span class="c1">; provider = FieldBallProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FieldCoverage</span><span class="c1">; provider = FieldCoverageProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FieldDimensions</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FieldFeatureOverview</span><span class="c1">; provider = FieldFeatureOverviewProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FieldRating</span><span class="c1">; provider = FieldRatingProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FieldScore</span><span class="c1">; provider = FieldScoreProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FilteredBallPercepts</span><span class="c1">; provider = BallPerceptFilter;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FootSoleRotationCalibration</span><span class="c1">; provider = FootSoleRotationCalibrationProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">GameInfo</span><span class="c1">; provider = WhistleHandler;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">GlobalFieldCoverage</span><span class="c1">; provider = GlobalFieldCoverageProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">HeadAngleRequest</span><span class="c1">; provider = CameraControlEngine;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">HeadLimits</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">HeadMotionRequest</span><span class="c1">; provider = BehaviorControl;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">IMUCalibration</span><span class="c1">; provider = IMUCalibrationProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">IntersectionRelations</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">JointLimits</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">KickInfo</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">KickoffState</span><span class="c1">; provider = KickoffStateProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">LEDRequest</span><span class="c1">; provider = LEDHandler;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">LibCheck</span><span class="c1">; provider = LibCheckProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">LibLookActive</span><span class="c1">; provider = LibLookActiveProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">LibPosition</span><span class="c1">; provider = LibPositionProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">LibTeam</span><span class="c1">; provider = LibTeamProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">LibTeammates</span><span class="c1">; provider = LibTeammatesProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">LibWalk</span><span class="c1">; provider = LibWalkProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">MidCircle</span><span class="c1">; provider = MidCirclePerceptor;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">MotionRequest</span><span class="c1">; provider = BehaviorControl;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ObstacleModel</span><span class="c1">; provider = ObstacleModelProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Odometer</span><span class="c1">; provider = OdometerProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">OpponentTeamInfo</span><span class="c1">; provider = GameDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">OwnTeamInfo</span><span class="c1">; provider = GameDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">PathPlanner</span><span class="c1">; provider = PathPlannerProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">PenaltyArea</span><span class="c1">; provider = PenaltyAreaPerceptor;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">PenaltyMarkWithPenaltyAreaLine</span><span class="c1">; provider = PenaltyMarkWithPenaltyAreaLinePerceptor;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">PerceptRegistration</span><span class="c1">; provider = PerceptRegistrationProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">RawGameInfo</span><span class="c1">; provider = GameDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">RobotDimensions</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">RobotHealth</span><span class="c1">; provider = RobotHealthProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">RobotInfo</span><span class="c1">; provider = GameDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">RobotPose</span><span class="c1">; provider = SelfLocator;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">SelfLocalizationHypotheses</span><span class="c1">; provider = SelfLocator;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">SetupPoses</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">SideInformation</span><span class="c1">; provider = SideInformationProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">StaticInitialPose</span><span class="c1">; provider = StaticInitialPoseProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">SupporterPositioning</span><span class="c1">; provider = SupporterPositioningProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">TeamActivationGraph</span><span class="c1">; provider = TeamBehaviorControl;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">TeamBallModel</span><span class="c1">; provider = TeamBallLocator;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">TeamBehaviorStatus</span><span class="c1">; provider = TeamBehaviorControl;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">TeamData</span><span class="c1">; provider = TeamMessageHandler;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">TeamPlayersModel</span><span class="c1">; provider = TeamPlayersLocator;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">TeamTalk</span><span class="c1">; provider = BehaviorControl;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Whistle</span><span class="c1">; provider = WhistleRecognizer;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">WorldModelPrediction</span><span class="c1">; provider = WorldModelPredictor;},</span>
+<span class="w">        </span><span class="na">];</span>
+<span class="w">    </span><span class="na">},{</span>
+<span class="w">        </span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Motion</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">priority</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">20</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">debugReceiverSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">500000</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">debugSenderSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">130000</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">debugSenderInfrastructureSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">100000</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">executionUnit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Motion</span><span class="c1">;</span>
+<span class="w">        </span><span class="na">representationProviders</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">[</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ArmContactModel</span><span class="c1">; provider = ArmContactModelProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ArmKeyFrameGenerator</span><span class="c1">; provider = ArmKeyFrameEngine;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ArmMotionInfo</span><span class="c1">; provider = MotionEngine;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">BallSpecification</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">DamageConfigurationBody</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">DamageConfigurationHead</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">DribbleGenerator</span><span class="c1">; provider = DribbleEngine;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">DynamicTesting</span><span class="c1">; provider = DynamicController;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">EnergySaving</span><span class="c1">; provider = EnergySavingProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FallDownState</span><span class="c1">; provider = FallDownStateProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FallGenerator</span><span class="c1">; provider = FallEngine;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FilteredCurrent</span><span class="c1">; provider = FilteredCurrentProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FootBumperState</span><span class="c1">; provider = FootBumperStateProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FootSupport</span><span class="c1">; provider = FootSupportProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FootOffset</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FrameInfo</span><span class="c1">; provider = NaoProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">FsrSensorData</span><span class="c1">; provider = NaoProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">GetUpGenerator</span><span class="c1">; provider = KeyframeMotionEngine;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">GlobalOptions</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">GroundContactState</span><span class="c1">; provider = GroundContactDetector;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">GyroOffset</span><span class="c1">; provider = GyroOffsetProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">GyroState</span><span class="c1">; provider = GyroStateProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">HeadLimits</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">HeadMotionGenerator</span><span class="c1">; provider = HeadMotionEngine;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">HeadMotionInfo</span><span class="c1">; provider = MotionEngine;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">InertialData</span><span class="c1">; provider = InertialDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">InertialSensorData</span><span class="c1">; provider = NaoProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">JointAngles</span><span class="c1">; provider = JointAnglesProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">JointCalibration</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">JointLimits</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">JointRequest</span><span class="c1">; provider = MotionEngine;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">JointSensorData</span><span class="c1">; provider = NaoProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">KeyframeMotionGenerator</span><span class="c1">; provider = KeyframeMotionEngine;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">KeyframeMotionParameters</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">KeyStates</span><span class="c1">; provider = NaoProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">KickGenerator</span><span class="c1">; provider = KickEngine;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">KickInfo</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">MassCalibration</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">MotionInfo</span><span class="c1">; provider = MotionEngine;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">MotionRobotHealth</span><span class="c1">; provider = MotionRobotHealthProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">OdometryData</span><span class="c1">; provider = MotionEngine;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">PointAtGenerator</span><span class="c1">; provider = PointAtEngine;},</span>
+<span class="w">            </span><span class="na">// {representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ReplayWalkRequestGenerator</span><span class="c1">; provider = ReplayWalkRequestProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">RobotDimensions</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">RobotModel</span><span class="c1">; provider = RobotModelProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">StandGenerator</span><span class="c1">; provider = WalkingEngine;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">StiffnessSettings</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">SystemSensorData</span><span class="c1">; provider = NaoProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">TorsoMatrix</span><span class="c1">; provider = TorsoMatrixProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">WalkAtAbsoluteSpeedGenerator</span><span class="c1">; provider = WalkAtSpeedEngine;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">WalkAtRelativeSpeedGenerator</span><span class="c1">; provider = WalkAtSpeedEngine;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">WalkGenerator</span><span class="c1">; provider = WalkingEngine;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">WalkingEngineOutput</span><span class="c1">; provider = WalkingEngine;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">WalkKickGenerator</span><span class="c1">; provider = WalkKickEngine;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">WalkLearner</span><span class="c1">; provider = WalkLearnerProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">WalkModifier</span><span class="c1">; provider = ConfigurationDataProvider;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">WalkStepData</span><span class="c1">; provider = WalkingEngine;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">WalkToBallGenerator</span><span class="c1">; provider = WalkToBallEngine;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">WalkToBallAndKickGenerator</span><span class="c1">; provider = WalkToBallAndKickEngine;},</span>
+<span class="w">            </span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">WalkToPoseGenerator</span><span class="c1">; provider = WalkToPoseEngine;},</span>
+<span class="w">        </span><span class="na">];</span>
+<span class="w">    </span><span class="na">},</span>
+<span class="na">];</span>
+</pre></div>
+</div>
+</div>
+</details></section>
+<section id="explications">
+<h2>Explications<a class="headerlink" href="#explications" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>Nous allons ajouter notre représentation dans le fichier de configuration (<em>thread.cfg</em>) qui se trouve dans le répertoire <code class="docutils literal notranslate"><span class="pre">Config/Scenarios/Default/</span></code>.
+Comme expliqué dans <a class="reference internal" href="../../overview/core_concepts.html#core-concepts"><span class="std std-ref">Concepts de base</span></a>, le système s’appuie sur plusieurs threads parallèles, chacun ayant une fonction spécifique.
+Par exemple, les threads de perception traitent les images des caméras, tandis que d’autres gèrent la cognition,
+le mouvement ou encore la communication avec un PC distant pour le débogage.</p>
+<p>Ici, nous nous concentrons sur le thread « Upper » de la caméra,
+car il correspond à la caméra frontale du NAO,
+offrant ainsi une vision directement orientée vers l’avant du robot.</p>
+<p>Il est important d’ajouter la représentation et son fournisseur dans la section correspondante, en respectant l’ordre alphabétique.</p>
+<div class="highlight-cfg notranslate"><div class="highlight"><pre><span></span><span class="na">{representation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ColorDetect</span><span class="c1">; provider = ColorDetector;},</span>
+</pre></div>
+</div>
+<p>Vous venez ainsi d’intégrer la représentation dans le fichier de configuration.
+Passez maintenant au tutoriel suivant pour poursuivre l’intégration de cette représentation dans l’ensemble du système.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenu
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-code">Le code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explications">Explications</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Par Les développeurs du projet : Documentation des projets de Naova
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024-2025, Les développeurs du projet : Documentation des projets de Naova.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Mis à jour le janv. 24, 2026.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

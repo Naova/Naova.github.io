@@ -1,8 +1,7 @@
-K1 – Robot Humanoïde
-====================
+Documentation des projets de Naova K1
+==================================
 
-
-.. figure:: source/_static/nao.jpg
+.. figure:: source/_static/k1.jpg
    :width: 100%
    :alt: Robot Nao debout
 
@@ -43,26 +42,18 @@ Table des matieres
    :caption: Vue d'ensemble
    :titlesonly:
 
-   source/overview/core_concepts
-
 .. toctree::
    :maxdepth: 2
    :caption: Ressources
    :titlesonly:
 
-   source/resources/tutorials/index
-   source/resources/how-to/index
+
 
 .. toctree::
    :maxdepth: 2
    :caption: Projets
    :titlesonly:
 
-   source/projects/behavior/index
-   source/projects/communication/index
-   source/projects/motion-control/index
-   source/projects/perception/index
-   source/projects/challenges/index
 
 .. toctree::
    :maxdepth: 1
@@ -80,3 +71,4 @@ Table des matieres
     GitHub <https://github.com/Naova/NaovaRelease>
     Naova <https://clubnaova.ca/>
     ETS <https://www.etsmtl.ca/>
+    Ancien site nao <https://naova.github.io/nao-archive-docs>
