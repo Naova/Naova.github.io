@@ -71,4 +71,4 @@ Table des matieres
     GitHub <https://github.com/Naova/NaovaRelease>
     Naova <https://clubnaova.ca/>
     ETS <https://www.etsmtl.ca/>
-    Ancien site nao <https://naova.github.io/nao>
+    Ancien site nao <https://naova.github.io/nao-archive-docs>
