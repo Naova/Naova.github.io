@@ -1,4 +1,4 @@
-.. _modify-module:
+.. _nao-modify-module:
 
 Modifier un module existant
 ===========================

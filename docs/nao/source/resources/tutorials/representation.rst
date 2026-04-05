@@ -1,4 +1,4 @@
-.. _representation:
+.. _nao-representation:
 
 Créer une nouvelle représentation
 =================================
@@ -63,7 +63,7 @@ Ensuite, nous incluons les outils nécessaires :
     #include "Tools/Math/Angle.h"
     #include "Tools/Streams/AutoStreamable.h"
 
-Enfin, nous définissons la structure de notre représentation. Dans notre cas, la seule information qui nous intéresse est celle évoquée dans le tutoriel :ref:`module`, à savoir *isThereRedColor*, un booléen.
+Enfin, nous définissons la structure de notre représentation. Dans notre cas, la seule information qui nous intéresse est celle évoquée dans le tutoriel :ref:`nao-module`, à savoir *isThereRedColor*, un booléen.
 
 .. code-block:: cpp
 

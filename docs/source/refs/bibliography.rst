@@ -1,7 +1,7 @@
 .. _bibliography:
 
-Bibliographie
-=============
+Bibliography
+============
 
 .. bibliography::
     :all:

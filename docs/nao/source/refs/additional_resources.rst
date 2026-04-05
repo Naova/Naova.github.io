@@ -1,4 +1,4 @@
-.. _additional-resources:
+.. _nao-additional-resources:
 
 Ressources additionnelles 
 =========================

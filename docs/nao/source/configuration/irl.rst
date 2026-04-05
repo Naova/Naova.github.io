@@ -1,4 +1,4 @@
-.. _irl:
+.. _nao-irl:
 
 Déployer sur un Robot Réel
 ==========================

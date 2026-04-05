@@ -1,7 +1,7 @@
-.. _changelog:
+.. _nao-changelog:
 
 Changelog
 =========
 
-.. include:: ../../../CHANGELOG.md
+.. include:: ../../../../CHANGELOG.md
    :parser: markdown

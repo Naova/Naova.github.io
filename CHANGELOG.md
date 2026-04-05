@@ -1,10 +1,29 @@
 # Changelog
 
-Ce fichier suit les changements notables apportés à la documentation du projet [Naova.github.io](https://github.com/Naova/Naova.github.io), selon le format `vx.y`.
+This file tracks notable changes to the [Naova.github.io](https://github.com/Naova/Naova.github.io) project documentation, following the `vx.y` format.
 
-- `x` s'incrémente lors de **refontes majeures** (remplacement ou suppression d'une documentation existante pour un projet).
-- `y` s'incrémente à chaque **ajout**, **amélioration** ou **correction mineure** de contenu.
+- `x` increments for **major overhauls** (replacement or removal of existing project documentation).
+- `y` increments for each **addition**, **improvement**, or **minor fix** to content.
 
+---
+
+## [v2.0]
+
+### Addition
+- Added detailed installation instructions for NaovaCodeK1.
+
+---
+
+## [v1.2]
+
+### Addition
+- Documentation about installation for the Webots simulation
+---
+
+## [v1.1]
+
+### Modified
+- Translated all documentation from French to English for broader accessibility.
 ---
 
 ## [v1.0]
@@ -12,6 +31,9 @@ Ce fichier suit les changements notables apportés à la documentation du projet
 ### Ajouté
 - Fonction de génération multiversion de la documentation.
 - Support du tag Git `vX.0` uniquement.
+
+### Modifié
+- Mise à jour du script `naova.bat`.
 
 ---
 

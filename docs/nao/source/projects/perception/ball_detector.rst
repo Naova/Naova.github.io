@@ -1,4 +1,4 @@
-.. _ball-detector:
+.. _nao-ball-detector:
 
 Détecteur de balle
 ==================

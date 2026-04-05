@@ -1,4 +1,4 @@
-.. _core-concepts:
+.. _nao-core-concepts:
 
 Concepts de base
 ================

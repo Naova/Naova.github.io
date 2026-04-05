@@ -20,9 +20,9 @@ import os
 
 # -- Project information -----------------------------------------------------
 
-project = "Documentation des projets de Naova"
-copyright = "2024-2025, Les développeurs du projet : Documentation des projets de Naova"
-author = "Les développeurs du projet : Documentation des projets de Naova"
+project = "Naova Project Documentation"
+copyright = "2024-2025, Naova Project Documentation Contributors"
+author = "Naova Project Documentation Contributors"
 
 # -- General configuration ---------------------------------------------------
 
@@ -103,7 +103,7 @@ templates_path = []
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ["_build", "_redirect", "_templates", "Thumbs.db", ".DS_Store", "README.md", "licenses/*"]
+exclude_patterns = ["_build", "_redirect", "_templates", "Thumbs.db", ".DS_Store", "README.md", "licenses/*", "nao/**"]
 
 # Mock out modules that are not available on RTD
 autodoc_mock_imports = [
@@ -147,13 +147,13 @@ suppress_warnings = [
 # -- Internationalization ----------------------------------------------------
 
 # specifying the natural language populates some key tags
-language = "fr"
+language = "en"
 
 # -- Options for HTML output -------------------------------------------------
 
 import sphinx_book_theme
 
-html_title = "Documentation des projets de Naova"
+html_title = "Naova Project Documentation"
 html_theme_path = [sphinx_book_theme.get_html_theme_path()]
 html_theme = "sphinx_book_theme"
 html_favicon = "source/_static/favicon.ico"
@@ -176,7 +176,7 @@ html_theme_options = {
     "show_toc_level": 1,
     "use_sidenotes": True,
     "logo": {
-        "text": "Documentation des projets de Naova",
+        "text": "Naova Project Documentation",
         "image_light": "source/_static/naova_exp.png",
         "image_dark": "source/_static/naova_exp_dark.png",
     },

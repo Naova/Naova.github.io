@@ -1,4 +1,4 @@
-.. _how-to:
+.. _nao-how-to:
 
 Comment faire
 =============

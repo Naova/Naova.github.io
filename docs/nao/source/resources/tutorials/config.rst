@@ -1,4 +1,4 @@
-.. _config:
+.. _nao-config:
 
 Ajouter la représentation au fichier de configuration
 =====================================================
@@ -300,7 +300,7 @@ Explications
 ------------
 
 Nous allons ajouter notre représentation dans le fichier de configuration (*thread.cfg*) qui se trouve dans le répertoire ``Config/Scenarios/Default/``.  
-Comme expliqué dans :ref:`core-concepts`, le système s'appuie sur plusieurs threads parallèles, chacun ayant une fonction spécifique.  
+Comme expliqué dans :ref:`nao-core-concepts`, le système s'appuie sur plusieurs threads parallèles, chacun ayant une fonction spécifique.  
 Par exemple, les threads de perception traitent les images des caméras, tandis que d'autres gèrent la cognition, 
 le mouvement ou encore la communication avec un PC distant pour le débogage.
 

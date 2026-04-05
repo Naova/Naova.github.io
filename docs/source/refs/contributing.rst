@@ -1,27 +1,27 @@
 .. _contributing:
 
-Comment contribuer
-==================
+How to Contribute
+=================
 
-Une fois que vous avez terminé un projet chez Naova, il vous sera demandé de le documenter sur ce site. 
-Cette page vous guidera dans le processus.
+Once you have completed a project at Naova, you will be asked to document it on this site.
+This page will guide you through the process.
 
-Étapes à suivre
+Steps to Follow
 ---------------
 
-1. Exécutez la commande suivante pour cloner le dépôt :
+1. Run the following command to clone the repository:
 
 .. code-block:: console
     
-    git clone https://github.com/Naova/Naova.github.io.git
+    git clone git@github.com:Naova/NaovaPrivateWiki.git
 
-2. Ensuite, entrez dans le répertoire du projet :
+2. Next, enter the project directory:
 
 .. code-block:: console
 
-    cd Naova.github.io
+    cd NaovaPrivateWiki
 
-3. Pour mettre votre dépôt local à jour avec le dernier état de la branche principale, exécutez :
+3. To update your local repository with the latest state of the main branch, run:
 
 .. code-block:: console
 
@@ -29,28 +29,28 @@ Cette page vous guidera dans le processus.
     git checkout main
     git reset --hard origin/main
 
-4. Créez une nouvelle branche avec la commande suivante :
+4. Create a new branch with the following command:
 
 .. code-block:: console
     
-    git checkout -b nom_de_votre_projet
+    git checkout -b your_project_name
 
-5. Créez un fichier nommé `nom_de_votre_projet.rst` dans le dossier `docs/source/projects/`.
+5. Create a file named `your_project_name.rst` in the `docs/source/projects/` folder.
 
-6. Au début du fichier, ajoutez les lignes suivantes :
+6. At the beginning of the file, add the following lines:
 
 .. code-block:: RST
     
-    .. _nom_de_votre_projet:
+    .. _your_project_name:
 
-    Titre
+    Title
     =====
 
-Veillez à placer un underscore avant le nom de votre projet et à vous assurer que les signes égal sous le titre sont de la même longueur.
+Make sure to place an underscore before your project name and ensure that the equal signs under the title are the same length.
 
-7.  Ajoutez votre projet à `index.rst` dans la section "Projets".
+7.  Add your project to `index.rst` in the "Projects" section.
 
-8.  Documentez votre projet dans le fichier `.rst`. Une fois que c'est fait pour construire et ouvrir la documentation localement entrez : 
+8.  Document your project in the `.rst` file. Once done, to build and open the documentation locally, enter:
 
 .. tab-set::
    :sync-group: os
@@ -60,7 +60,7 @@ Veillez à placer un underscore avant le nom de votre projet et à vous assurer 
 
       .. note::
 
-         Nous l'avons testé seulement sur Ubuntu 22.04LTS.
+         We have only tested this on Ubuntu 22.04 LTS.
 
       .. code:: console
 
@@ -71,209 +71,191 @@ Veillez à placer un underscore avant le nom de votre projet et à vous assurer 
 
       .. note::
 
-         WIP
+         TO TEST
 
       .. code:: console
 
          naova.bat
 
-9.   Assurez-vous que votre utilisateur Git local est à jour, ou exécutez :
+9.   Make sure your local Git credentials are up to date, or run:
 
 .. code-block:: console
     
     git config --global user.email "email@example.com"
     git config --global user.name "username"
 
-C'est l'utilisateur et l'email qui apparaîtront dans l'historique GitHub.
+This is the user and email that will appear in the GitHub history.
 
-10.  Exécutez la commande suivante pour sélectionner les modifications que vous souhaitez ajouter :
+10.  Run the following command to select the changes you want to add:
 
 .. code-block:: console
     
     git add -p
 
-11. Validez vos modifications avec la commande suivante :
+11. Commit your changes with the following command:
 
 .. code-block:: console
     
-    git commit -m "Description du changement"
+    git commit -m "Change description"
 
-12. Forkez `Naova/Naova.github.io <https://github.com/Naova/Naova.github.io#fork-destination-box>`_.
-
-13. Ajoutez le dépôt forké avec la commande suivante :
+12. Push your branch to `origin` with the following command:
 
 .. code-block:: console
     
-    git remote add fork https://github.com/username/Naova.github.io.git
+    git push -u origin your_project_name
 
-**Remplacez** `username` par votre nom d'utilisateur GitHub.
+13. Go to `https://github.com/Naova/NaovaPrivateWiki` and open a new pull request.
 
-14.  Récupérez les mises à jour de votre fork avec la commande suivante :
+14. In the `base` dropdown, select `main`, as you want to submit a PR to this branch.
 
-.. code-block:: console
-    
-    git fetch fork
+15. In the `compare` dropdown, select your branch (`your_project_name`).
 
-15. Poussez votre branche vers votre fork avec la commande suivante :
+16. Review your changes and click `Create pull request`.
 
-.. code-block:: console
-    
-    git push fork
+17. Wait for all automated tests to pass.
 
-16. Rendez-vous sur votre fork sur GitHub à l'adresse suivante : `https://github.com/username/Naova.github.io`.
+18. The PR will be approved or rejected after review by the team.
 
-17. Cliquez sur le bouton `New pull request`.
+New Modifications
+-----------------
 
-18. Dans la liste déroulante `base`, sélectionnez `main`, car vous souhaitez soumettre une PR vers cette branche.
+To continue with a new modification, return to step 3.
+To return to your PR and make new modifications:
 
-19. Dans la liste déroulante `compare`, sélectionnez votre branche (`nom_de_votre_contribution`).
-
-20. Passez en revue vos modifications et cliquez sur `Create pull request`.
-
-21. Attendez que tous les tests automatisés soient passés.
-
-22. La PR sera approuvée ou rejetée après examen par l'équipe.
-
-Nouvelles modifications 
------------------------
-
-Pour continuer avec une nouvelle modification, revenez à l'étape 3.  
-Pour revenir à votre PR et apporter de nouvelles modifications :
-
-1. Exécutez la commande suivante pour mettre de côté les modifications en cours :
+1. Run the following command to stash your current changes:
 
 .. code-block:: console
     
     git stash
 
-2. Exécutez la commande suivante pour revenir à votre branche de contribution :
+2. Run the following command to return to your contribution branch:
 
 .. code-block:: console
     
-    git checkout nom_de_votre_contribution
+    git checkout your_project_name
 
-3.  Répétez les étapes 10 et 11.
+3.  Repeat steps 10 and 11.
 
-4.  Poussez vos modifications à nouveau avec la commande suivante :
+4.  Push your changes again with the following command:
 
 .. code-block:: console
     
-    git push fork
+    git push origin your_project_name
 
-La pull request sera automatiquement mise à jour.
+The pull request will be automatically updated.
 
 
-Bon à savoir sur l'écriture en RST
+Good to Know About Writing in RST
 ----------------------------------
 
-Le langage **reStructuredText (RST)** est utilisé pour la documentation technique et est largement adopté par **Sphinx**.  
-Voici les principales fonctionnalités utiles pour rédiger efficacement vos documents.
+The **reStructuredText (RST)** language is used for technical documentation and is widely adopted by **Sphinx**.
+Here are the main useful features for writing your documents effectively.
 
 
-Insertion de liens
-^^^^^^^^^^^^^^^^^^
+Inserting Links
+^^^^^^^^^^^^^^^
 
-Il existe plusieurs façons d'ajouter des liens en RST :
+There are several ways to add links in RST:
 
-1. **Lien simple intégré dans le texte** ::
+1. **Simple link embedded in text** ::
 
-    Voir la documentation officielle `Sphinx <https://www.sphinx-doc.org/>`_.
+    See the official `Sphinx <https://www.sphinx-doc.org/>`_ documentation.
 
-2. **Lien nommé (réutilisable dans plusieurs endroits du document)** ::
+2. **Named link (reusable in multiple places in the document)** ::
 
     .. _sphinx-docs: https://www.sphinx-doc.org/
 
-    Consultez la `documentation Sphinx <sphinx-docs_>`_.
+    Check out the `Sphinx documentation <sphinx-docs_>`_.
 
 
-Mise en forme du texte
-^^^^^^^^^^^^^^^^^^^^^^
+Text Formatting
+^^^^^^^^^^^^^^^
 
-- **Gras** : ``**Texte en gras**`` → **Texte en gras**  
-- *Italique* : ``*Texte en italique*`` → *Texte en italique*  
-- ``Texte en monospace`` : ```code``` → `code`
-- Liste à puces ::
+- **Bold** : ``**Bold text**`` → **Bold text**  
+- *Italic* : ``*Italic text*`` → *Italic text*  
+- ``Monospace text`` : ```code``` → `code`
+- Bullet list ::
 
-   - Élément 1
-   - Élément 2
+   - Element 1
+   - Element 2
 
-- Liste numérotée ::
+- Numbered list ::
 
-   1. Premier élément
-   2. Deuxième élément
+   1. First element
+   2. Second element
 
 
-Créer des sous-sections
-^^^^^^^^^^^^^^^^^^^^^^^
+Creating Subsections
+^^^^^^^^^^^^^^^^^^^^
 
-RST permet d'organiser un document en sections et sous-sections en utilisant différentes ponctuations ::
+RST allows you to organize a document into sections and subsections using different punctuation marks ::
 
-   Titre principal
-   ===============
+   Main Title
+   ==========
 
    Section
    -------
 
-   Sous-section
-   ^^^^^^^^^^^^
+   Subsection
+   ^^^^^^^^^^
 
-   Sous-sous-section
-   """""""""""""""""
+   Sub-subsection
+   """"""""""""""
 
 
-Insertion d'images
-^^^^^^^^^^^^^^^^^^
+Inserting Images
+^^^^^^^^^^^^^^^^
 
-Pour ajouter une image ::
+To add an image ::
 
    .. image:: source/_static/project_name/nao_robot.png
       :alt: Nao Robot
       :width: 300px
       :align: center
 
-    Cela affichera `source/_static/project_name/nao_robot.png` avec une largeur de **300px** et alignée au centre.
+    This will display `source/_static/project_name/nao_robot.png` with a width of **300px** and centered.
 
 
-Insertion de vidéos
-^^^^^^^^^^^^^^^^^^^
+Inserting Videos
+^^^^^^^^^^^^^^^^
 
-Les vidéos peuvent être intégrées sous forme de liens ou via HTML brut si nécessaire :
+Videos can be embedded as links or via raw HTML if necessary:
 
-1. **Lien vers une vidéo YouTube** ::
+1. **Link to a YouTube video** ::
     
-    Voir la démonstration sur YouTube : `Vidéo RoboCup <https://www.youtube.com/watch?v=xvFZjo5PgG0>`_.
+    See the demonstration on YouTube: `RoboCup Video <https://www.youtube.com/watch?v=xvFZjo5PgG0>`_.
 
 
-2. **HTML pour intégrer directement une vidéo** (nécessite `html` dans Sphinx) ::
+2. **HTML to directly embed a video** (requires `html` in Sphinx) ::
 
     .. raw:: html
         <iframe width="560" height="315" src="https://www.youtube.com/embed/xvFZjo5PgG0" frameborder="0" allowfullscreen></iframe>
 
 
-Références à d'autres pages
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+References to Other Pages
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Il est possible de créer des liens vers d'autres sections ou pages de la documentation.
+It is possible to create links to other sections or pages of the documentation.
 
-1. **Lien vers une section de la même page** ::
+1. **Link to a section on the same page** ::
 
-    Voir la section :ref:`Insertion d'images <insertion-images>`.
+    See the section :ref:`Inserting Images <insertion-images>`.
 
-   Pour que cela fonctionne, la section doit être marquée avec une **étiquette** ::
+   For this to work, the section must be marked with a **label** ::
     
     .. _insertion-images:
 
-       Insertion d'images
-       ------------------
+       Inserting Images
+       ----------------
 
-2. **Lien vers une autre page de la documentation** ::
+2. **Link to another documentation page** ::
 
-    Voir aussi :ref:`autre_page`
+    See also :ref:`other_page`
 
-   où `autre_page.rst` est un fichier dans le même projet.
+   where `other_page.rst` is a file in the same project.
 
-3. **Lien vers une référence bibliographique** (avec `sphinxcontrib-bibtex`) ::
+3. **Link to a bibliographic reference** (with `sphinxcontrib-bibtex`) ::
 
-    Voir l'article :cite:`kali2021walking`
+    See the article :cite:`k1-kali2021walking`
 
-   La citation doit être définie dans un fichier `.bib` inclus dans la documentation.
+   The citation must be defined in a `.bib` file included in the documentation.

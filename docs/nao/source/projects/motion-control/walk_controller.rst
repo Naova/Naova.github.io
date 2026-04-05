@@ -1,4 +1,4 @@
-.. _walk-controller:
+.. _nao-walk-controller:
 
 Contrôleur de marche
 =====================

@@ -1,4 +1,4 @@
-.. _contributing:
+.. _nao-contributing:
 
 Comment contribuer
 ==================
@@ -274,6 +274,6 @@ Il est possible de créer des liens vers d'autres sections ou pages de la docume
 
 3. **Lien vers une référence bibliographique** (avec `sphinxcontrib-bibtex`) ::
 
-    Voir l'article :cite:`kali2021walking`
+    Voir l'article :cite:`nao-kali2021walking`
 
    La citation doit être définie dans un fichier `.bib` inclus dans la documentation.

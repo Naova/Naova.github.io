@@ -1,4 +1,4 @@
-.. _module:
+.. _nao-module:
 
 Créer un nouveau module
 =======================
@@ -225,7 +225,7 @@ Ensuite, pour notre module de détection d'objets rouges, nous allons procéder 
         */
 
    - Incluez les représentations nécessaires (CameraInfo, CameraImage, ColorDetect).  
-     (Référez-vous au tutoriel :ref:`representation` pour la création de *ColorDetect*).
+    (Référez-vous au tutoriel :ref:`nao-representation` pour la création de *ColorDetect*).
 
      .. code-block:: cpp
 

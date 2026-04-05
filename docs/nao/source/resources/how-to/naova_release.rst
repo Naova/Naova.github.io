@@ -1,4 +1,4 @@
-.. _naova-release:
+.. _nao-naova-release:
 
 Déploiement du code sur le dépôt NaovaRelease
 =============================================

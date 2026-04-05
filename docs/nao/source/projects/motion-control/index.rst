@@ -1,4 +1,4 @@
-.. _motion-control:
+.. _nao-motion-control:
 
 Contrôle de mouvement
 =====================

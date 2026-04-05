@@ -10,7 +10,7 @@ Cette documentation regroupe les différents projets réalisés au sein de Naova
 dans le but de faciliter la navigation et d'assurer une meilleure transmission d'informations pour les nouveaux membres du club.
 
 Si vous souhaitez ajouter votre propre projet à la documentation, 
-consultez la section :ref:`contributing`.
+consultez la section :ref:`nao-contributing`.
 
 License
 ^^^^^^^

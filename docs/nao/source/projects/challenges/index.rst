@@ -1,4 +1,4 @@
-.. _challenges:
+.. _nao-challenges:
 
 Challenges
 ==========

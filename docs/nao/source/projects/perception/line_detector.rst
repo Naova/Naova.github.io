@@ -1,4 +1,4 @@
-.. _line-detector:
+.. _nao-line-detector:
 
 Détecteur de ligne
 ==================

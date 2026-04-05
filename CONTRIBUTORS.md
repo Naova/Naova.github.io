@@ -54,8 +54,8 @@ Veuillez garder les  listes triées par **ordre alphabétique**.
 ### Sponsors
 
 #### Diamond Sponsor
-- École de technologie supérieure (ETS) 
-- ETS's Student Association 
+- École de technologie supérieure (ÉTS) 
+- ÉTS's Student Association 
 
 #### Gold Sponsor
 - Rousseau Metal International 

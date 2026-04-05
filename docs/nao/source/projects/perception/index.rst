@@ -1,4 +1,4 @@
-.. _perception:
+.. _nao-perception:
 
 Perception
 ==========

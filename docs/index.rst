@@ -1,74 +1,129 @@
-Documentation des projets de Naova K1
-==================================
-
+Naova K1 Project Documentation
+==============================
 .. figure:: source/_static/k1.jpg
    :width: 100%
-   :alt: Robot Nao debout
+   :alt: K1 robot standing
 
+This documentation gathers the projects developed within Naova.
 
-Cette documentation regroupe les différents projets réalisés au sein de Naova, 
-dans le but de faciliter la navigation et d'assurer une meilleure transmission d'informations pour les nouveaux membres du club.
+If you want to add your own project to the documentation,
+see the :ref:`contributing` section.
 
-Si vous souhaitez ajouter votre propre projet à la documentation, 
-consultez la section :ref:`contributing`.
+Start Here
+^^^^^^^^^^
 
-License
-^^^^^^^
+To get the full and complete setup:
 
-La documentation des projets de Naova est open-source et distribuée sous la licence BSD-3-Clause.
-Pour plus de détails, consultez `BSD 3-Clause License
-<https://github.com/Naova/Naova.github.io/blob/main/LICENSE>`_.
+1. Ask a repository admin to add your GitHub account to our organization.
+2. Ensure your `SSH key is added to GitHub <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>`_. , then verify access with:
 
-Remerciements
-^^^^^^^^^^^^^
+   .. code-block:: bash
 
-Merci aux membres de Naova pour toutes leurs contributions. 
-Pour voir la liste complète des développeurs des projets de Naova, 
-consultez le fichier `CONTRIBUTORS.md <https://github.com/Naova/Naova.github.io/blob/main/CONTRIBUTORS.md>`_.
+      ssh -T git@github.com
 
-Table des matieres
-^^^^^^^^^^^^^^^^^^
+   See :ref:`installation` for detailed setup instructions.
+
+3. If you need internal documentation, make sure you have access to the private wiki repository. 
+
+   .. note::
+      Our documentation is maintained in two repositories:
+
+      - **Private wiki (internal work):** `NaovaPrivateWiki <https://github.com/Naova/NaovaPrivateWiki>`_.
+      - **Public wiki (published externally):** `Naova.github.io <https://github.com/Naova/Naova.github.io>`_.
+
+      The **private wiki** is mainly for projects in development.
+      It is the more complete and current source of documentation. 
+
+   If you have not cloned the private wiki repository yet, clone it:
+
+   .. code-block:: bash
+
+      git clone git@github.com:Naova/NaovaPrivateWiki.git
+
+5. Update your local copy regularly to stay in sync with the latest changes:
+
+   .. code-block:: bash
+
+      cd NaovaPrivateWiki
+      git pull origin main
+
+6. Build the documentation locally to access it offline and see the latest updates:
+
+   .. code-block:: bash
+
+      ./naova.sh
+
+7. Follow the installation guide to complete your local setup: :ref:`installation`.
+
+8. Use :ref:`contributing` when you are ready to add or update documentation.
+
+Documentation Map
+^^^^^^^^^^^^^^^^^
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Configuration
+   :maxdepth: 2
+   :caption: Getting Started
 
    source/configuration/installation
-   source/configuration/simulation
    source/configuration/irl
+   source/configuration/simulation
 
 .. toctree::
    :maxdepth: 1
-   :caption: Vue d'ensemble
+   :caption: Core Concepts
    :titlesonly:
+
+   source/overview/core_concepts
 
 .. toctree::
    :maxdepth: 2
-   :caption: Ressources
+   :caption: Project Modules
    :titlesonly:
 
-
+   source/projects/behavior/index
+   source/projects/challenges/index
+   source/projects/communication/index
+   source/projects/motion-control/index
+   source/projects/perception/index
 
 .. toctree::
    :maxdepth: 2
-   :caption: Projets
+   :caption: Guides
    :titlesonly:
 
+   source/resources/how-to/index
 
 .. toctree::
    :maxdepth: 1
-   :caption: Références
+   :caption: References
 
    source/refs/additional_resources
    source/refs/contributing
    source/refs/bibliography
    source/refs/changelog
 
-.. toctree::
-    :hidden:
-    :caption: Liens vers les projets
+Project and Community Links
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    GitHub <https://github.com/Naova/NaovaRelease>
-    Naova <https://clubnaova.ca/>
-    ETS <https://www.etsmtl.ca/>
-    Ancien site nao <https://naova.github.io/nao>
+.. toctree::
+   :hidden:
+   :caption: External Links
+
+   GitHub <https://github.com/Naova/NaovaRelease>
+   Naova <https://clubnaova.ca/>
+   ETS <https://www.etsmtl.ca/>
+   Legacy nao site <https://naova.github.io/nao>
+
+License
+^^^^^^^
+
+Naova project documentation is open-source and distributed under the BSD-3-Clause license.
+For details, see `BSD 3-Clause License
+<https://github.com/Naova/Naova.github.io/blob/main/LICENSE>`_.
+
+Acknowledgements
+^^^^^^^^^^^^^^^^
+
+Thanks to all Naova members for their contributions.
+For the full list of project contributors,
+see `CONTRIBUTORS.md <https://github.com/Naova/Naova.github.io/blob/main/CONTRIBUTORS.md>`_.
