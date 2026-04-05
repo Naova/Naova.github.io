@@ -1,8 +1,8 @@
 .. _simulation:
 
-Déployer en Simulation
-=======================
+Deployment in Simulation
+========================
 
-Étapes de déploiement
----------------------
+Deployment Steps
+----------------
 
