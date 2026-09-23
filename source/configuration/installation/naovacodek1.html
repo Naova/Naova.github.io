@@ -56,12 +56,12 @@
     <link rel="icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Physical Deployment" href="../irl.html" />
-    <link rel="prev" title="Webots Installation" href="webots.html" />
+    <link rel="next" title="Webots Installation" href="webots.html" />
+    <link rel="prev" title="Installation" href="../installation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Apr 05, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 23, 2026"/>
   </head>
   
   
@@ -193,7 +193,8 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Project Modules</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../projects/behavior/index.html">Behavior</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../projects/behavior/index.html">Behavior</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/behavior/behaviortree.html">Behavior Tree Reference</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../projects/challenges/index.html">Challenges</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
@@ -443,8 +444,9 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-booster-robotics-sdk">Install Booster Robotics SDK</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-extra-dependencies">Install extra dependencies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-booster-robotics-sdk">1. Install Booster Robotics SDK</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clone-naovacodek1-repository">2. Clone NaovaCodeK1 repository</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-extra-dependencies">3. Install extra dependencies</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build">Build</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run">Run</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-notes">Configuration notes</a></li>
@@ -476,38 +478,60 @@
 <li><p>Around 20+ GB free disk space (more if installing vision dependencies)</p></li>
 <li><p>ROS2 Humble already installed</p></li>
 </ul>
-<p>Open a terminal and move to the project root:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/path/to/NaovaCodeK1
+<p>Install core build tools first:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>python3-colcon-common-extensions<span class="w"> </span>python3-rosdep
+sudo<span class="w"> </span>rosdep<span class="w"> </span>init
+rosdep<span class="w"> </span>update
 </pre></div>
 </div>
-<p>If you do not have the repository yet:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:Naova/NaovaCodeK1.git
-<span class="nb">cd</span><span class="w"> </span>NaovaCodeK1
+<p>Install required system libraries:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>libopencv-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>libpcl-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>libeigen3-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>libyaml-cpp-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>libpcap-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>ros-humble-backward-ros
 </pre></div>
 </div>
 </section>
 <section id="install-booster-robotics-sdk">
-<h2>Install Booster Robotics SDK<a class="headerlink" href="#install-booster-robotics-sdk" title="Permalink to this heading">#</a></h2>
+<h2>1. Install Booster Robotics SDK<a class="headerlink" href="#install-booster-robotics-sdk" title="Permalink to this heading">#</a></h2>
 <p>Follow the official <a class="reference external" href="https://github.com/BoosterRobotics/booster_robotics_sdk">Booster Robotics SDK installation guide</a> :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/path/to/booster_sdk
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/naova/
 git<span class="w"> </span>clone<span class="w"> </span>https://github.com/BoosterRobotics/booster_robotics_sdk.git
 <span class="nb">cd</span><span class="w"> </span>booster_robotics_sdk
 sudo<span class="w"> </span>./install.sh
 </pre></div>
 </div>
 </section>
-<section id="install-extra-dependencies">
-<h2>Install extra dependencies<a class="headerlink" href="#install-extra-dependencies" title="Permalink to this heading">#</a></h2>
-<p>Install <code class="docutils literal notranslate"><span class="pre">backward-ros</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>ros-humble-backward-ros
+<section id="clone-naovacodek1-repository">
+<h2>2. Clone NaovaCodeK1 repository<a class="headerlink" href="#clone-naovacodek1-repository" title="Permalink to this heading">#</a></h2>
+<p>If you do not have the repository yet:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/naova/
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:Naova/NaovaCodeK1.git
+<span class="nb">cd</span><span class="w"> </span>NaovaCodeK1
 </pre></div>
 </div>
-<p>For <strong>build without CUDA</strong> (ONNX inference), install ONNX Runtime first:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># aarch64</span>
+</section>
+<section id="install-extra-dependencies">
+<h2>3. Install extra dependencies<a class="headerlink" href="#install-extra-dependencies" title="Permalink to this heading">#</a></h2>
+<p>Install remaining ROS package dependencies from this workspace:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>/opt/ros/humble/setup.bash
+rosdep<span class="w"> </span>install<span class="w"> </span>--from-paths<span class="w"> </span>src<span class="w"> </span>--ignore-src<span class="w"> </span>-r<span class="w"> </span>-y
+</pre></div>
+</div>
+<p>For <strong>build without CUDA</strong> (ONNX inference), install ONNX Runtime first.</p>
+<p>On aarch64:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/naova/NaovaCodeK1
+<span class="c1"># aarch64</span>
 ./third_party_aarch64/install_onnxruntime.sh
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># x86_64</span>
+<p>On x86_64:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/naova/NaovaCodeK1
+<span class="c1"># x86_64</span>
 ./third_party/install_onnxruntime.sh
 </pre></div>
 </div>
@@ -516,8 +540,8 @@ sudo<span class="w"> </span>./install.sh
 <h2>Build<a class="headerlink" href="#build" title="Permalink to this heading">#</a></h2>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Most users should use the <strong>without CUDA</strong> flow unless they have a GPU that
-supports CUDA Compute Capability <strong>5.0</strong> or higher.</p>
+<p>Most users should use the <strong>without CUDA</strong> flow unless they have a GPU (Nvidia GeForce RTX 5050 or higher) that
+supports CUDA Compute Capability <strong>12.0</strong> or higher.</p>
 </div>
 <p>Build without CUDA (requires ONNX Runtime):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./scripts/build_no_cuda.sh
@@ -527,10 +551,27 @@ supports CUDA Compute Capability <strong>5.0</strong> or higher.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./scripts/build.sh
 </pre></div>
 </div>
+<p>Shell environment (important):</p>
+<p>In each new terminal, source ROS first, then this workspace overlay:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>/opt/ros/humble/setup.bash
+<span class="nb">source</span><span class="w"> </span>install/setup.bash
+</pre></div>
+</div>
+<p>Notes:</p>
+<ul class="simple">
+<li><p>If you only source <code class="docutils literal notranslate"><span class="pre">/opt/ros/humble/setup.bash</span></code>, this workspace packages are not overlaid.</p></li>
+<li><p>After any <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code>, run <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">install/setup.bash</span></code> again in that terminal.</p></li>
+</ul>
 </section>
 <section id="run">
 <h2>Run<a class="headerlink" href="#run" title="Permalink to this heading">#</a></h2>
 <p>Simulation (virtual robot):</p>
+<p>For first-time setup, copy the example local override files once:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>src/brain/config/config_local.example.yaml<span class="w"> </span>src/brain/config/config_local.yaml
+cp<span class="w"> </span>src/vision/config/vision_local.example.yaml<span class="w"> </span>src/vision/config/vision_local.yaml
+</pre></div>
+</div>
+<p>Then start simulation:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./scripts/sim_start.sh
 </pre></div>
 </div>
@@ -552,6 +593,12 @@ the real-robot values instead of the simulation values.</p>
 </section>
 <section id="configuration-notes">
 <h2>Configuration notes<a class="headerlink" href="#configuration-notes" title="Permalink to this heading">#</a></h2>
+<p>Config precedence:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> / <code class="docutils literal notranslate"><span class="pre">vision.yaml</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">config_local.yaml</span></code> / <code class="docutils literal notranslate"><span class="pre">vision_local.yaml</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">~/agents/booster_soccer/brain.yaml</span></code> / <code class="docutils literal notranslate"><span class="pre">~/agents/booster_soccer/vision.yaml</span></code></p></li>
+</ol>
 <p>JetPack 6.2 note:</p>
 <p>This repository supports JetPack 6.2 and is adapted to the default TensorRT
 model configured in <code class="docutils literal notranslate"><span class="pre">src/vision/config/vision.yaml</span></code>.</p>
@@ -575,20 +622,20 @@ model configured in <code class="docutils literal notranslate"><span class="pre"
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="webots.html"
+       href="../installation.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Webots Installation</p>
+        <p class="prev-next-title">Installation</p>
       </div>
     </a>
     <a class="right-next"
-       href="../irl.html"
+       href="webots.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Physical Deployment</p>
+        <p class="prev-next-title">Webots Installation</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -610,8 +657,9 @@ model configured in <code class="docutils literal notranslate"><span class="pre"
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-booster-robotics-sdk">Install Booster Robotics SDK</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-extra-dependencies">Install extra dependencies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-booster-robotics-sdk">1. Install Booster Robotics SDK</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clone-naovacodek1-repository">2. Clone NaovaCodeK1 repository</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-extra-dependencies">3. Install extra dependencies</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build">Build</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run">Run</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-notes">Configuration notes</a></li>
@@ -648,7 +696,7 @@ By Naova Project Documentation Contributors
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Apr 05, 2026.
+  Last updated on Sep 23, 2026.
   <br/>
 </p>
   </div>

@@ -6,12 +6,29 @@ Installation
 This page summarizes the recommended setup order for new contributors.
 Use it as a quick onboarding checklist before diving into project-specific details.
 
+The setup is organized around a shared ``~/naova`` workspace with the following
+top-level repositories:
+
+.. code-block:: text
+
+  naova
+  ├── booster_robotics_sdk
+  ├── GameController*
+  ├── NaovaCode2023
+  ├── NaovaCodeK1
+  ├── NaovaPrivateWiki
+  └── NaovaWebots
+
+``GameController`` is optional and is mainly useful for the communication team.
+
 Recommended order
 *****************
 
 1. Set up the wiki workflow first (branching, editing, PR process): :ref:`contributing`.
 2. Set up the development codebase environment for K1 work: :ref:`installation-naovacodek1`.
 3. Set up simulation in Webots to validate changes before hardware tests: :ref:`installation-webots`.
+
+.. TO DO: add instructions for legacy code and GameController setup.
 
 General Installation
 =====================
@@ -54,5 +71,5 @@ Steps for general installation
    :maxdepth: 1
    :caption: Installation Guides
 
-   installation/webots
    installation/naovacodek1
+   installation/webots

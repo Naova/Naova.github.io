@@ -56,12 +56,12 @@
     <link rel="icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="NaovaCodeK1 Installation" href="naovacodek1.html" />
-    <link rel="prev" title="Installation" href="../installation.html" />
+    <link rel="next" title="Physical Deployment" href="../irl.html" />
+    <link rel="prev" title="NaovaCodeK1 Installation" href="naovacodek1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Apr 05, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 23, 2026"/>
   </head>
   
   
@@ -193,7 +193,8 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Project Modules</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../projects/behavior/index.html">Behavior</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../projects/behavior/index.html">Behavior</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/behavior/behaviortree.html">Behavior Tree Reference</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../projects/challenges/index.html">Challenges</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
@@ -450,15 +451,11 @@
 and control robots in a 3D virtual environment.</p>
 <p>To install Webots, follow these steps:</p>
 <ol class="arabic simple">
-<li><p>Download the files from <a class="reference external" href="https://github.com/Naova/NaovaWebots/releases">our latest release</a>.</p></li>
-</ol>
-<blockquote>
-<div><p>Leave the files in the Downloads folder for now.</p>
-</div></blockquote>
-<ol class="arabic simple" start="2">
+<li><p>Download the files from <a class="reference external" href="https://github.com/Naova/NaovaWebots/releases">our latest release</a>.
+Leave the files in the Downloads folder for now.</p></li>
 <li><p>Clone the Git repository:</p></li>
 </ol>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git@github.com:Naova/NaovaWebots.git</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone git@github.com:Naova/NaovaWebots.git</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="3">
@@ -481,13 +478,16 @@ and control robots in a 3D virtual environment.</p>
 </div>
 </li>
 </ul>
-<p>4. Test the installation by launching Webots:
-The script can be launched from anywhere with the following command:</p>
+<ol class="arabic" start="4">
+<li><p>Test the installation by launching Webots:</p>
+<p>The script can be launched from anywhere with the following command:</p>
+</li>
+</ol>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">webots</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="5">
-<li><p>You can copy <cite>booster-runner-full-webots-k1-0.0.1.run</cite> from the Downloads folder to the Webots installation directory (e.g., /usr/local/webots) and run it to configures the Webots-K1 environment before each simulation session.</p></li>
+<li><p>You can copy <cite>booster-runner-full-webots-k1-0.0.1.run</cite> from the Downloads folder to the Webots installation directory (e.g., /usr/local/webots) and run it to configure the Webots-K1 environment before each simulation session.</p></li>
 </ol>
 </section>
 
@@ -503,20 +503,20 @@ The script can be launched from anywhere with the following command:</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../installation.html"
+       href="naovacodek1.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Installation</p>
+        <p class="prev-next-title">NaovaCodeK1 Installation</p>
       </div>
     </a>
     <a class="right-next"
-       href="naovacodek1.html"
+       href="../irl.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">NaovaCodeK1 Installation</p>
+        <p class="prev-next-title">Physical Deployment</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -555,7 +555,7 @@ By Naova Project Documentation Contributors
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Apr 05, 2026.
+  Last updated on Sep 23, 2026.
   <br/>
 </p>
   </div>

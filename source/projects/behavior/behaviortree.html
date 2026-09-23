@@ -1,0 +1,948 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Behavior Tree Reference &#8212; Naova Project Documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/home/runner/.local/lib/python3.12/site-packages/sphinxcontrib/icon/node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="/home/runner/.local/lib/python3.12/site-packages/sphinxcontrib/icon/node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'source/projects/behavior/behaviortree';</script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Challenges" href="../challenges/index.html" />
+    <link rel="prev" title="Behavior" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="Sep 23, 2026"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/naova_exp.png" class="logo__image only-light" alt=""/>
+    <img src="../../../_static/naova_exp_dark.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">Naova Project Documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Quick Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Naova/Naova.github.io" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/installation.html">Installation</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/irl.html">Physical Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration/simulation.html">Deployment in Simulation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Concepts</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/core_concepts.html">Core Concepts</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Project Modules</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Behavior</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Behavior Tree Reference</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../challenges/index.html">Challenges</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../communication/index.html">Communication</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../motion-control/index.html">Motion Control</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../motion-control/walk_controller.html">Walk Controller</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../perception/index.html">Perception</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../perception/ball_detector.html">Ball Detector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../perception/line_detector.html">Line Detector</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../resources/how-to/index.html">How To</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../resources/how-to/naova_release.html">Deploying Code to the NaovaRelease Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resources/how-to/v5_deployment.html">Preparing a Nao v5 for Demonstrations</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../refs/additional_resources.html">Additional Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../refs/contributing.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../refs/bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../refs/changelog.html">Changelog</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">External Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Naova/NaovaRelease">GitHub</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://clubnaova.ca/">Naova</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.etsmtl.ca/">ETS</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://naova.github.io/nao">Legacy nao site</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Naova/Naova.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Naova/Naova.github.io/edit/main/source/projects/behavior/behaviortree.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Naova/Naova.github.io/issues/new?title=Issue%20on%20page%20%2Fsource/projects/behavior/behaviortree.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/source/projects/behavior/behaviortree.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Behavior Tree Reference</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-states-priority-order">Control States — Priority Order</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#state-1-manual-assist-mode-highest-priority">State 1 — Manual / Assist Mode (highest priority)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#state-2-recalibrate-re-enter-mode">State 2 — Recalibrate / Re-enter Mode</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#state-3-full-auto-mode-default">State 3 — Full Auto Mode (default)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auto-mode-sub-state-types">Auto Mode — Sub-state Types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timeout">TIMEOUT</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#none-normal-play">NONE — Normal Play</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#free-kick-during-play">FREE_KICK — During PLAY</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#startup-sequence">Startup Sequence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-robot-status">Example Robot Status</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-design-patterns">Key Design Patterns</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reactivesequence-with-while">ReactiveSequence with <code class="docutils literal notranslate"><span class="pre">_while</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#autoremap-true"><code class="docutils literal notranslate"><span class="pre">_autoremap="true"</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#role-separation">Role separation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actual-soccer-logic">Actual soccer logic</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#behavior-tree-diagrams">Behavior Tree Diagrams</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagram-1-full-auto-mode-overview">Diagram 1 — Full Auto Mode Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagram-2-manual-assist-mode">Diagram 2 — Manual / Assist Mode</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagram-3-recalibrate-re-enter-mode">Diagram 3 — Recalibrate / Re-enter Mode</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagram-4-free-kick-state-machine">Diagram 4 — Free Kick State Machine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagram-5-normal-game-state-machine">Diagram 5 — Normal Game State Machine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagram-5-mode-auto-state-machine">Diagram 5 — Mode Auto State Machine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagram-6-controller">Diagram 6 — Controller</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="behavior-tree-reference">
+<h1>Behavior Tree Reference<a class="headerlink" href="#behavior-tree-reference" title="Permalink to this heading">#</a></h1>
+<div class="line-block">
+<div class="line"><strong>Project:</strong> game.xml</div>
+<div class="line"><strong>Robot:</strong> RoboCup Soccer Robot</div>
+</div>
+<hr class="docutils" />
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
+<p>The tree is a single root <code class="docutils literal notranslate"><span class="pre">Sequence</span></code>. On startup a <code class="docutils literal notranslate"><span class="pre">RunOnce</span></code> sets
+<code class="docutils literal notranslate"><span class="pre">control_state=3</span></code> (auto mode). Three priority blocks are checked
+top-to-bottom every tick via <code class="docutils literal notranslate"><span class="pre">ReactiveSequence</span> <span class="pre">_while</span></code>. The first
+block whose condition is true wins; all lower-priority blocks are
+skipped.</p>
+</section>
+<hr class="docutils" />
+<section id="control-states-priority-order">
+<h2>Control States — Priority Order<a class="headerlink" href="#control-states-priority-order" title="Permalink to this heading">#</a></h2>
+<section id="state-1-manual-assist-mode-highest-priority">
+<h3>State 1 — Manual / Assist Mode (highest priority)<a class="headerlink" href="#state-1-manual-assist-mode-highest-priority" title="Permalink to this heading">#</a></h3>
+<p><strong>Active when:</strong> <code class="docutils literal notranslate"><span class="pre">control_state==1</span></code> or <code class="docutils literal notranslate"><span class="pre">assist_kick</span></code> or <code class="docutils literal notranslate"><span class="pre">go_manual</span></code> or <code class="docutils literal notranslate"><span class="pre">assist_chase</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Go manual</p></td>
+<td><p>Any joystick axis &gt;0.1 → direct velocity control. LX/LY = move, RX = rotate.</p></td>
+</tr>
+<tr class="row-even"><td><p>Assist chase</p></td>
+<td><p>Hold LB → <code class="docutils literal notranslate"><span class="pre">SimpleChase</span></code> at vx=1.5 with no braking distance.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Assist kick</p></td>
+<td><p>Hold RB → <code class="docutils literal notranslate"><span class="pre">Kick</span></code> at speed=0.9, minimum 1000ms duration.</p></td>
+</tr>
+<tr class="row-even"><td><p>Enter</p></td>
+<td><p>LT+X sets <code class="docutils literal notranslate"><span class="pre">control_state=1</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Exit</p></td>
+<td><p>Release all conditions, or press LT+B</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<img alt="Manual / Assist Mode" class="align-center" src="../../../_images/diagrammanual.png" />
+<p><em>Three independent branches: go manual, assist chase, assist kick.</em></p>
+</section>
+<section id="state-2-recalibrate-re-enter-mode">
+<h3>State 2 — Recalibrate / Re-enter Mode<a class="headerlink" href="#state-2-recalibrate-re-enter-mode" title="Permalink to this heading">#</a></h3>
+<p><strong>Active when:</strong> <code class="docutils literal notranslate"><span class="pre">control_state==2</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>If !calibrated</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">CamScanField</span></code> — rotate head to find landmarks and localize via particle filter.</p></td>
+</tr>
+<tr class="row-even"><td><p>If calibrated</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">CamFindAndTrackBall</span></code> — keep eyes on ball ready to resume.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Parallel</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">SelfLocateEnterField</span></code> runs throughout — walks to re-entry position.</p></td>
+</tr>
+<tr class="row-even"><td><p>Enter</p></td>
+<td><p>LT+A sets <code class="docutils literal notranslate"><span class="pre">control_state=2</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Exit</p></td>
+<td><p>Operator presses LT+B (no automatic exit)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<img alt="Recalibrate / Re-enter Mode" class="align-center" src="../../../_images/diagramcalibrate.png" />
+<p><em>Localization loop: scan field until calibrated, then track ball.</em></p>
+</section>
+<section id="state-3-full-auto-mode-default">
+<h3>State 3 — Full Auto Mode (default)<a class="headerlink" href="#state-3-full-auto-mode-default" title="Permalink to this heading">#</a></h3>
+<p><strong>Active when:</strong> <code class="docutils literal notranslate"><span class="pre">control_state==3</span> <span class="pre">&amp;&amp;</span> <span class="pre">!go_manual</span></code> — set on startup</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 85.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Step 1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">AutoGetUpAndLocate</span></code> — always runs first. Handles fall recovery.</p></td>
+</tr>
+<tr class="row-even"><td><p>Step 2</p></td>
+<td><p>If <code class="docutils literal notranslate"><span class="pre">gc_is_under_penalty</span></code> → stop, scan, wait to re-enter field.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Step 3</p></td>
+<td><p>Otherwise → game flow by sub-state type (see below).</p></td>
+</tr>
+<tr class="row-even"><td><p>Enter</p></td>
+<td><p>Startup (<code class="docutils literal notranslate"><span class="pre">RunOnce</span></code>) or LT+B</p></td>
+</tr>
+<tr class="row-odd"><td><p>Exit</p></td>
+<td><p>Never — this is the default state</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<img alt="Mode Auto State Machine" class="align-center" src="../../../_images/diagrammodeauto.png" />
+<p><em>Three-phase mode auto flow: AutoGetUpAndLocate → WaitForPenalty → GameFlow.</em></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="auto-mode-sub-state-types">
+<h2>Auto Mode — Sub-state Types<a class="headerlink" href="#auto-mode-sub-state-types" title="Permalink to this heading">#</a></h2>
+<section id="timeout">
+<h3>TIMEOUT<a class="headerlink" href="#timeout" title="Permalink to this heading">#</a></h3>
+<p>Stop all movement, scan field, track ball. Safe idle until game resumes.</p>
+</section>
+<section id="none-normal-play">
+<h3>NONE — Normal Play<a class="headerlink" href="#none-normal-play" title="Permalink to this heading">#</a></h3>
+<p>Driven by <code class="docutils literal notranslate"><span class="pre">gc_game_state</span></code> from the game controller:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 85.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Game state</p></th>
+<th class="head"><p>Behavior</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>INITIAL</p></td>
+<td><p>Scan field to localize, track ball, walk to entry position. Loops until READY signal.</p></td>
+</tr>
+<tr class="row-odd"><td><p>READY</p></td>
+<td><p>Look forward (<code class="docutils literal notranslate"><span class="pre">MoveHead</span> <span class="pre">pitch=0.35</span></code>), walk to kickoff position at vx=0.7, localize.</p></td>
+</tr>
+<tr class="row-even"><td><p>SET</p></td>
+<td><p>Track ball with camera, stop all movement, localize. Freeze and wait for kickoff.</p></td>
+</tr>
+<tr class="row-odd"><td><p>PLAY</p></td>
+<td><p>Run <code class="docutils literal notranslate"><span class="pre">StrikerPlay</span></code> or <code class="docutils literal notranslate"><span class="pre">GoalKeeperPlay</span></code> subtree based on <code class="docutils literal notranslate"><span class="pre">player_role</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p>END</p></td>
+<td><p>Stop all movement. Match over.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<img alt="Normal Game State Machine" class="align-center" src="../../../_images/diagramnormalgame.png" />
+<p><em>Four-phase normal game flow: INITIAL → READY → SET → PLAY.</em></p>
+</section>
+<section id="free-kick-during-play">
+<h3>FREE_KICK — During PLAY<a class="headerlink" href="#free-kick-during-play" title="Permalink to this heading">#</a></h3>
+<p>Active when <code class="docutils literal notranslate"><span class="pre">gc_game_sub_state_type</span> <span class="pre">==</span> <span class="pre">'FREE_KICK'</span></code> and <code class="docutils literal notranslate"><span class="pre">gc_game_state</span> <span class="pre">==</span> <span class="pre">'PLAY'</span></code>.
+Driven by <code class="docutils literal notranslate"><span class="pre">gc_game_sub_state</span></code>:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 85.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Phase</p></th>
+<th class="head"><p>Behavior</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>STOP</p></td>
+<td><p>Track ball, localize if <code class="docutils literal notranslate"><span class="pre">ball_location_known</span></code>, stop all movement.</p></td>
+</tr>
+<tr class="row-odd"><td><p>GET_READY</p></td>
+<td><p>Localize, then run role-specific freekick subtree (<code class="docutils literal notranslate"><span class="pre">StrikerFreekick</span></code> or <code class="docutils literal notranslate"><span class="pre">GoalKeeperFreekick</span></code>).</p></td>
+</tr>
+<tr class="row-even"><td><p>SET</p></td>
+<td><p>Track ball, localize, stop all movement. Wait for kick signal.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<img alt="Free Kick State Machine" class="align-center" src="../../../_images/diagramfreekick.png" />
+<p><em>Three-phase free kick flow: STOP → GET_READY → SET.</em></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="startup-sequence">
+<h2>Startup Sequence<a class="headerlink" href="#startup-sequence" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">RunOnce</span></code> sets <code class="docutils literal notranslate"><span class="pre">control_state</span> <span class="pre">=</span> <span class="pre">3</span></code>.</p></li>
+<li><p>State 1 and State 2 checks are skipped — conditions false.</p></li>
+<li><p>State 3 activates → <code class="docutils literal notranslate"><span class="pre">AutoGetUpAndLocate</span></code> runs.</p></li>
+<li><p>Not penalized → sub-state NONE → <code class="docutils literal notranslate"><span class="pre">gc_game_state</span> <span class="pre">=</span> <span class="pre">INITIAL</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CamScanField</span></code> until localized → <code class="docutils literal notranslate"><span class="pre">CamFindAndTrackBall</span></code> → <code class="docutils literal notranslate"><span class="pre">SelfLocateEnterField</span></code>.</p></li>
+<li><p>Loops in INITIAL until game controller sends READY signal.</p></li>
+</ol>
+<img alt="Full Auto Mode Overview" class="align-center" src="../../../_images/diagramoverview.png" />
+<p><em>Top-level control flow: startup, modes, and sub-state routing.</em></p>
+</section>
+<hr class="docutils" />
+<section id="example-robot-status">
+<h2>Example Robot Status<a class="headerlink" href="#example-robot-status" title="Permalink to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 35.0%" />
+<col style="width: 65.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Team ID / Player ID</p></td>
+<td><p>29 / Player 1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Number of players</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>Role</p></td>
+<td><p>Striker (start role: striker)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Control state</p></td>
+<td><p>Auto (3)</p></td>
+</tr>
+<tr class="row-even"><td><p>Game sub-state type</p></td>
+<td><p>NONE</p></td>
+</tr>
+<tr class="row-odd"><td><p>Game state</p></td>
+<td><p>INITIAL</p></td>
+</tr>
+<tr class="row-even"><td><p>Kickoff side</p></td>
+<td><p>NO</p></td>
+</tr>
+<tr class="row-odd"><td><p>Score</p></td>
+<td><p>0 : 0</p></td>
+</tr>
+<tr class="row-even"><td><p>Live count / Oppo</p></td>
+<td><p>0 / 0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Primary striker</p></td>
+<td><p>YES</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="key-design-patterns">
+<h2>Key Design Patterns<a class="headerlink" href="#key-design-patterns" title="Permalink to this heading">#</a></h2>
+<section id="reactivesequence-with-while">
+<h3>ReactiveSequence with <code class="docutils literal notranslate"><span class="pre">_while</span></code><a class="headerlink" href="#reactivesequence-with-while" title="Permalink to this heading">#</a></h3>
+<p>The sequence only runs while its condition is true. The moment the
+condition becomes false, the sequence exits immediately and the tree
+falls through to the next sibling. This gives the tree its
+priority-based, reactive feel — higher-priority states preempt lower
+ones instantly.</p>
+</section>
+<section id="autoremap-true">
+<h3><code class="docutils literal notranslate"><span class="pre">_autoremap=&quot;true&quot;</span></code><a class="headerlink" href="#autoremap-true" title="Permalink to this heading">#</a></h3>
+<p>All subtrees share the same blackboard automatically. Any key with the
+same name in both the parent and subtree is connected without explicit
+port mapping. Since <code class="docutils literal notranslate"><span class="pre">brain.cpp</span></code> writes entries like
+<code class="docutils literal notranslate"><span class="pre">tree-&gt;setEntry&lt;string&gt;(&quot;player_role&quot;,</span> <span class="pre">...)</span></code>, every subtree that
+declares a port with that name gets the value automatically.</p>
+</section>
+<section id="role-separation">
+<h3>Role separation<a class="headerlink" href="#role-separation" title="Permalink to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">player_role</span></code> blackboard key gates which subtree runs at PLAY and
+GET_READY levels. The value is written by <code class="docutils literal notranslate"><span class="pre">handleCooperation()</span></code> in
+<code class="docutils literal notranslate"><span class="pre">brain.cpp</span></code> based on team negotiation and game state.</p>
+</section>
+<section id="actual-soccer-logic">
+<h3>Actual soccer logic<a class="headerlink" href="#actual-soccer-logic" title="Permalink to this heading">#</a></h3>
+<p>The interesting behavior — chasing, kicking, positioning, defending —
+lives entirely inside four subtrees:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">StrikerPlay</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GoalKeeperPlay</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">StrikerFreekick</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GoalKeeperFreekick</span></code></p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="behavior-tree-diagrams">
+<h2>Behavior Tree Diagrams<a class="headerlink" href="#behavior-tree-diagrams" title="Permalink to this heading">#</a></h2>
+<p>The following diagrams illustrate each state machine from the behavior
+tree, as designed in draw.io.</p>
+<section id="diagram-1-full-auto-mode-overview">
+<h3>Diagram 1 — Full Auto Mode Overview<a class="headerlink" href="#diagram-1-full-auto-mode-overview" title="Permalink to this heading">#</a></h3>
+<img alt="Full Auto Mode Overview" class="align-center" src="../../../_images/diagramoverview.png" />
+<p><em>Top-level control flow: startup, modes, and sub-state routing.</em></p>
+</section>
+<section id="diagram-2-manual-assist-mode">
+<h3>Diagram 2 — Manual / Assist Mode<a class="headerlink" href="#diagram-2-manual-assist-mode" title="Permalink to this heading">#</a></h3>
+<img alt="Manual / Assist Mode" class="align-center" src="../../../_images/diagrammanual.png" />
+<p><em>Three independent branches: go manual, assist chase, assist kick.</em></p>
+</section>
+<section id="diagram-3-recalibrate-re-enter-mode">
+<h3>Diagram 3 — Recalibrate / Re-enter Mode<a class="headerlink" href="#diagram-3-recalibrate-re-enter-mode" title="Permalink to this heading">#</a></h3>
+<img alt="Recalibrate / Re-enter Mode" class="align-center" src="../../../_images/diagramcalibrate.png" />
+<p><em>Localization loop: scan field until calibrated, then track ball.</em></p>
+</section>
+<section id="diagram-4-free-kick-state-machine">
+<h3>Diagram 4 — Free Kick State Machine<a class="headerlink" href="#diagram-4-free-kick-state-machine" title="Permalink to this heading">#</a></h3>
+<img alt="Free Kick State Machine" class="align-center" src="../../../_images/diagramfreekick.png" />
+<p><em>Three-phase free kick flow: STOP → GET_READY → SET.</em></p>
+</section>
+<section id="diagram-5-normal-game-state-machine">
+<h3>Diagram 5 — Normal Game State Machine<a class="headerlink" href="#diagram-5-normal-game-state-machine" title="Permalink to this heading">#</a></h3>
+<img alt="Normal Game State Machine" class="align-center" src="../../../_images/diagramnormalgame.png" />
+<p><em>Four-phase normal game flow: INITIAL → READY → SET → PLAY.</em></p>
+</section>
+<section id="diagram-5-mode-auto-state-machine">
+<h3>Diagram 5 — Mode Auto State Machine<a class="headerlink" href="#diagram-5-mode-auto-state-machine" title="Permalink to this heading">#</a></h3>
+<img alt="Mode Auto State Machine" class="align-center" src="../../../_images/diagrammodeauto.png" />
+<p><em>Three-phase mode auto flow: AutoGetUpAndLocate → WaitForPenalty → GameFlow.</em></p>
+</section>
+<section id="diagram-6-controller">
+<h3>Diagram 6 — Controller<a class="headerlink" href="#diagram-6-controller" title="Permalink to this heading">#</a></h3>
+<img alt="Controller diagram" class="align-center" src="../../../_images/diagramcontroller.png" />
+<p><em>All inputs</em></p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Behavior</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../challenges/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Challenges</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-states-priority-order">Control States — Priority Order</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#state-1-manual-assist-mode-highest-priority">State 1 — Manual / Assist Mode (highest priority)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#state-2-recalibrate-re-enter-mode">State 2 — Recalibrate / Re-enter Mode</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#state-3-full-auto-mode-default">State 3 — Full Auto Mode (default)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auto-mode-sub-state-types">Auto Mode — Sub-state Types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timeout">TIMEOUT</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#none-normal-play">NONE — Normal Play</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#free-kick-during-play">FREE_KICK — During PLAY</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#startup-sequence">Startup Sequence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-robot-status">Example Robot Status</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-design-patterns">Key Design Patterns</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reactivesequence-with-while">ReactiveSequence with <code class="docutils literal notranslate"><span class="pre">_while</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#autoremap-true"><code class="docutils literal notranslate"><span class="pre">_autoremap="true"</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#role-separation">Role separation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actual-soccer-logic">Actual soccer logic</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#behavior-tree-diagrams">Behavior Tree Diagrams</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagram-1-full-auto-mode-overview">Diagram 1 — Full Auto Mode Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagram-2-manual-assist-mode">Diagram 2 — Manual / Assist Mode</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagram-3-recalibrate-re-enter-mode">Diagram 3 — Recalibrate / Re-enter Mode</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagram-4-free-kick-state-machine">Diagram 4 — Free Kick State Machine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagram-5-normal-game-state-machine">Diagram 5 — Normal Game State Machine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagram-5-mode-auto-state-machine">Diagram 5 — Mode Auto State Machine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagram-6-controller">Diagram 6 — Controller</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Naova Project Documentation Contributors
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024-2025, Naova Project Documentation Contributors.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on Sep 23, 2026.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

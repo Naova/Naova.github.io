@@ -19,48 +19,75 @@ You need:
 - Around 20+ GB free disk space (more if installing vision dependencies)
 - ROS2 Humble already installed
 
-Open a terminal and move to the project root:
+
+Install core build tools first:
 
 .. code-block:: bash
 
-	cd /path/to/NaovaCodeK1
+	sudo apt-get update
+	sudo apt-get install -y python3-colcon-common-extensions python3-rosdep
+	sudo rosdep init
+	rosdep update
 
-If you do not have the repository yet:
+Install required system libraries:
 
 .. code-block:: bash
 
-	git clone git@github.com:Naova/NaovaCodeK1.git
-	cd NaovaCodeK1
+	sudo apt-get install -y \
+		libopencv-dev \
+		libpcl-dev \
+		libeigen3-dev \
+		libyaml-cpp-dev \
+		libpcap-dev \
+		ros-humble-backward-ros
 
-Install Booster Robotics SDK
------------------------------
+
+1. Install Booster Robotics SDK
+--------------------------------
 Follow the official `Booster Robotics SDK installation guide <https://github.com/BoosterRobotics/booster_robotics_sdk>`_ :
 
 .. code-block:: bash
 
-	cd /path/to/booster_sdk
+	cd ~/naova/
 	git clone https://github.com/BoosterRobotics/booster_robotics_sdk.git
 	cd booster_robotics_sdk
 	sudo ./install.sh
 
-Install extra dependencies
---------------------------
+2. Clone NaovaCodeK1 repository
+--------------------------------
+If you do not have the repository yet:
 
-Install ``backward-ros``:
+.. code-block:: bash
+	
+	cd ~/naova/
+	git clone git@github.com:Naova/NaovaCodeK1.git
+	cd NaovaCodeK1
+
+3. Install extra dependencies
+------------------------------
+
+Install remaining ROS package dependencies from this workspace:
 
 .. code-block:: bash
 
-	sudo apt-get install ros-humble-backward-ros
+	source /opt/ros/humble/setup.bash
+	rosdep install --from-paths src --ignore-src -r -y
 
-For **build without CUDA** (ONNX inference), install ONNX Runtime first:
+For **build without CUDA** (ONNX inference), install ONNX Runtime first.
+
+On aarch64:
 
 .. code-block:: bash
 
+	cd ~/naova/NaovaCodeK1
 	# aarch64
 	./third_party_aarch64/install_onnxruntime.sh
 
+On x86_64:
+
 .. code-block:: bash
 
+	cd ~/naova/NaovaCodeK1
 	# x86_64
 	./third_party/install_onnxruntime.sh
 
@@ -68,8 +95,8 @@ Build
 -----
 
 .. important::
-	Most users should use the **without CUDA** flow unless they have a GPU that
-	supports CUDA Compute Capability **5.0** or higher.
+	Most users should use the **without CUDA** flow unless they have a GPU (Nvidia GeForce RTX 5050 or higher) that
+	supports CUDA Compute Capability **12.0** or higher.
 
 Build without CUDA (requires ONNX Runtime):
 
@@ -83,10 +110,33 @@ Build with CUDA (real robot):
 
 	./scripts/build.sh
 
+Shell environment (important):
+
+In each new terminal, source ROS first, then this workspace overlay:
+
+.. code-block:: bash
+
+	source /opt/ros/humble/setup.bash
+	source install/setup.bash
+
+Notes:
+
+- If you only source ``/opt/ros/humble/setup.bash``, this workspace packages are not overlaid.
+- After any ``colcon build``, run ``source install/setup.bash`` again in that terminal.
+
 Run
 ---
 
 Simulation (virtual robot):
+
+For first-time setup, copy the example local override files once:
+
+.. code-block:: bash
+
+	cp src/brain/config/config_local.example.yaml src/brain/config/config_local.yaml
+	cp src/vision/config/vision_local.example.yaml src/vision/config/vision_local.yaml
+
+Then start simulation:
 
 .. code-block:: bash
 
@@ -113,6 +163,12 @@ the real-robot values instead of the simulation values.
 
 Configuration notes
 -------------------
+
+Config precedence:
+
+1. ``config.yaml`` / ``vision.yaml``
+2. ``config_local.yaml`` / ``vision_local.yaml``
+3. ``~/agents/booster_soccer/brain.yaml`` / ``~/agents/booster_soccer/vision.yaml``
 
 JetPack 6.2 note:
 
