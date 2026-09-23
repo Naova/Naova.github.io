@@ -43,3 +43,8 @@ Although B-Human is a competing team, their framework serves as the basis for **
 - **Official website** : `B-Human <https://www.b-human.de/>`_
 - **Documentation** : `B-Human Docs <https://docs.b-human.de/master/>`_
 - **Source code** : `B-Human Code Release <https://github.com/bhuman/BHumanCodeRelease>`_
+
+Tutorials and Guides
+---------------------
+- **BehaviorTree.CPP tutorials** : `BehaviorTree.CPP Basic Tutorials <https://www.behaviortree.dev/docs/category/tutorials-basic/>`_
+- **ROS2 tutorials** : `ROS2 Tutorials <https://docs.ros.org/en/rolling/Tutorials.html>`_

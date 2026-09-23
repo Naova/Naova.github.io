@@ -11,6 +11,55 @@ Cette documentation a pour objectif de répertorier les différents projets dév
 Pour savoir comment contribuer à cette documentation ou ajouter un projet, veuillez consulter la page dédiée à la contribution :  
 [Comment contribuer](https://naova.github.io/source/refs/contributing.html).
 
+## Build local de la documentation
+
+Vous pouvez générer la documentation en local depuis la racine du dépôt avec les scripts fournis.
+
+### Ubuntu
+
+Prérequis :
+
+- `python3` installé et accessible dans le `PATH`
+- `pip` disponible
+
+Commande :
+
+```bash
+./naova.sh
+```
+
+Le script :
+
+- installe les dépendances Python depuis `docs/requirements.txt`
+- génère la documentation Sphinx dans `docs/_build/current`
+- ouvre automatiquement la page d'accueil dans le navigateur
+
+Si le navigateur ne s'ouvre pas automatiquement :
+
+```bash
+xdg-open docs/_build/current/index.html
+```
+
+### Windows
+
+Prérequis :
+
+- Python installé et accessible dans le `PATH`
+- `pip` disponible
+
+Commande (depuis `cmd`) :
+
+```bat
+naova.bat
+```
+
+Le script :
+
+- supprime l'ancien build dans `docs\_build`
+- installe les dépendances si nécessaire depuis `docs\requirements.txt`
+- génère la documentation Sphinx dans `docs\_build\html`
+- ouvre automatiquement `index.html`
+
 ## Projets
 
 Voici quelques projets actuellement documentés :

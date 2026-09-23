@@ -7,6 +7,17 @@ This file tracks notable changes to the [Naova.github.io](https://github.com/Nao
 
 ---
 
+## [v2.2]
+### Added
+- Added Behavior Tree Reference page under the Behavior section: 
+  documents game.xml control states, game state machine, free kick 
+  flow, startup sequence, and draw.io diagrams.
+
+---
+## [v2.1]
+### Modified
+- Updated the NaovaCodeK1 installation page with clearer prerequisites, dependency setup, build/run guidance, and configuration notes.
+
 ## [v2.0]
 
 ### Addition

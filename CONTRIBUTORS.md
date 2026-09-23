@@ -4,6 +4,7 @@ Voici la liste officielle des développeurs de Naova.
 Veuillez garder les  listes triées par **ordre alphabétique**.
 
 - Aissa Bouaraguia 
+- Alexandre Bedard
 - Alexandre Doyle 
 - Amira Morsli 
 - Annie Tremblay 
